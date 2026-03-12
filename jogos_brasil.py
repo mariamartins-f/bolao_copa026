@@ -3,7 +3,7 @@ import json
 from datetime import datetime, timedelta
 
 headers = {"X-Auth-Token": "a7e271a9d3814fcb9aa60d908b80a5a2"} 
-uri = "https://api.football-data.org/v4/teams/86/matches"
+uri = "https://api.football-data.org/v4/competitions/2000/matches"
 
 with open('traducoes.json', 'r', encoding='utf-8') as f:
     traducoes = json.load(f)

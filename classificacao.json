@@ -1,0 +1,302 @@
+[
+  {
+    "grupo": "Group A",
+    "times": [
+      {
+        "position": 1,
+        "team": "México",
+        "points": 0
+      },
+      {
+        "position": 2,
+        "team": "África do Sul",
+        "points": 0
+      },
+      {
+        "position": 3,
+        "team": "Coreia do Sul",
+        "points": 0
+      },
+      {
+        "position": 4,
+        "team": null,
+        "points": 0
+      }
+    ]
+  },
+  {
+    "grupo": "Group B",
+    "times": [
+      {
+        "position": 1,
+        "team": "Canadá",
+        "points": 0
+      },
+      {
+        "position": 2,
+        "team": null,
+        "points": 0
+      },
+      {
+        "position": 3,
+        "team": "Catar",
+        "points": 0
+      },
+      {
+        "position": 4,
+        "team": "Suíça",
+        "points": 0
+      }
+    ]
+  },
+  {
+    "grupo": "Group C",
+    "times": [
+      {
+        "position": 1,
+        "team": "Brasil",
+        "points": 0
+      },
+      {
+        "position": 2,
+        "team": "Marrocos",
+        "points": 0
+      },
+      {
+        "position": 3,
+        "team": "Haiti",
+        "points": 0
+      },
+      {
+        "position": 4,
+        "team": "Escócia",
+        "points": 0
+      }
+    ]
+  },
+  {
+    "grupo": "Group D",
+    "times": [
+      {
+        "position": 1,
+        "team": null,
+        "points": 0
+      },
+      {
+        "position": 2,
+        "team": "Estados Unidos",
+        "points": 0
+      },
+      {
+        "position": 3,
+        "team": "Paraguai",
+        "points": 0
+      },
+      {
+        "position": 4,
+        "team": "Austrália",
+        "points": 0
+      }
+    ]
+  },
+  {
+    "grupo": "Group E",
+    "times": [
+      {
+        "position": 1,
+        "team": "Alemanha",
+        "points": 0
+      },
+      {
+        "position": 2,
+        "team": "Curaçau",
+        "points": 0
+      },
+      {
+        "position": 3,
+        "team": "Costa do Marfim",
+        "points": 0
+      },
+      {
+        "position": 4,
+        "team": "Equador",
+        "points": 0
+      }
+    ]
+  },
+  {
+    "grupo": "Group F",
+    "times": [
+      {
+        "position": 1,
+        "team": "Países Baixos",
+        "points": 0
+      },
+      {
+        "position": 2,
+        "team": "Japão",
+        "points": 0
+      },
+      {
+        "position": 3,
+        "team": null,
+        "points": 0
+      },
+      {
+        "position": 4,
+        "team": "Tunísia",
+        "points": 0
+      }
+    ]
+  },
+  {
+    "grupo": "Group G",
+    "times": [
+      {
+        "position": 1,
+        "team": "Bélgica",
+        "points": 0
+      },
+      {
+        "position": 2,
+        "team": "Egito",
+        "points": 0
+      },
+      {
+        "position": 3,
+        "team": "República Islâmica do Irã",
+        "points": 0
+      },
+      {
+        "position": 4,
+        "team": "Nova Zelândia",
+        "points": 0
+      }
+    ]
+  },
+  {
+    "grupo": "Group H",
+    "times": [
+      {
+        "position": 1,
+        "team": "Espanha",
+        "points": 0
+      },
+      {
+        "position": 2,
+        "team": "Cabo Verde",
+        "points": 0
+      },
+      {
+        "position": 3,
+        "team": "Arábia Saudita",
+        "points": 0
+      },
+      {
+        "position": 4,
+        "team": "Uruguai",
+        "points": 0
+      }
+    ]
+  },
+  {
+    "grupo": "Group I",
+    "times": [
+      {
+        "position": 1,
+        "team": "França",
+        "points": 0
+      },
+      {
+        "position": 2,
+        "team": "Senegal",
+        "points": 0
+      },
+      {
+        "position": 3,
+        "team": null,
+        "points": 0
+      },
+      {
+        "position": 4,
+        "team": "Noruega",
+        "points": 0
+      }
+    ]
+  },
+  {
+    "grupo": "Group J",
+    "times": [
+      {
+        "position": 1,
+        "team": "Argentina",
+        "points": 0
+      },
+      {
+        "position": 2,
+        "team": "Argélia",
+        "points": 0
+      },
+      {
+        "position": 3,
+        "team": "Áustria",
+        "points": 0
+      },
+      {
+        "position": 4,
+        "team": "Jordânia",
+        "points": 0
+      }
+    ]
+  },
+  {
+    "grupo": "Group K",
+    "times": [
+      {
+        "position": 1,
+        "team": "Portugal",
+        "points": 0
+      },
+      {
+        "position": 2,
+        "team": null,
+        "points": 0
+      },
+      {
+        "position": 3,
+        "team": "Uzbequistão",
+        "points": 0
+      },
+      {
+        "position": 4,
+        "team": "Colômbia",
+        "points": 0
+      }
+    ]
+  },
+  {
+    "grupo": "Group L",
+    "times": [
+      {
+        "position": 1,
+        "team": "Inglaterra",
+        "points": 0
+      },
+      {
+        "position": 2,
+        "team": "Croácia",
+        "points": 0
+      },
+      {
+        "position": 3,
+        "team": "Gana",
+        "points": 0
+      },
+      {
+        "position": 4,
+        "team": "Panamá",
+        "points": 0
+      }
+    ]
+  }
+]

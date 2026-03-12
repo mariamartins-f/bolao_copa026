@@ -1,402 +1,834 @@
 [
   {
-    "dia": "19/08/2025",
+    "dia": "11/06/2026",
     "hora": "16:00",
-    "time_casa": "Real Madrid CF",
-    "gols_casa": 1,
-    "gols_fora": 0,
-    "time_fora": "CA Osasuna"
+    "time_casa": "México",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "África do Sul"
   },
   {
-    "dia": "24/08/2025",
-    "hora": "16:30",
-    "time_casa": "Real Oviedo",
-    "gols_casa": 0,
-    "gols_fora": 3,
-    "time_fora": "Real Madrid CF"
+    "dia": "11/06/2026",
+    "hora": "23:00",
+    "time_casa": "Coreia do Sul",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
   },
   {
-    "dia": "30/08/2025",
-    "hora": "16:30",
-    "time_casa": "Real Madrid CF",
-    "gols_casa": 2,
-    "gols_fora": 1,
-    "time_fora": "RCD Mallorca"
-  },
-  {
-    "dia": "13/09/2025",
-    "hora": "11:15",
-    "time_casa": "Real Sociedad de Fútbol",
-    "gols_casa": 1,
-    "gols_fora": 2,
-    "time_fora": "Real Madrid CF"
-  },
-  {
-    "dia": "16/09/2025",
+    "dia": "12/06/2026",
     "hora": "16:00",
-    "time_casa": "Real Madrid CF",
-    "gols_casa": 2,
-    "gols_fora": 1,
-    "time_fora": "Olympique de Marseille"
+    "time_casa": "Canadá",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
   },
   {
-    "dia": "20/09/2025",
-    "hora": "11:15",
-    "time_casa": "Real Madrid CF",
-    "gols_casa": 2,
-    "gols_fora": 0,
-    "time_fora": "RCD Espanyol de Barcelona"
+    "dia": "12/06/2026",
+    "hora": "22:00",
+    "time_casa": "Estados Unidos",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Paraguai"
   },
   {
-    "dia": "23/09/2025",
-    "hora": "16:30",
-    "time_casa": "Levante UD",
-    "gols_casa": 1,
-    "gols_fora": 4,
-    "time_fora": "Real Madrid CF"
+    "dia": "13/06/2026",
+    "hora": "01:00",
+    "time_casa": "Austrália",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
   },
   {
-    "dia": "27/09/2025",
-    "hora": "11:15",
-    "time_casa": "Club Atlético de Madrid",
-    "gols_casa": 5,
-    "gols_fora": 2,
-    "time_fora": "Real Madrid CF"
-  },
-  {
-    "dia": "30/09/2025",
-    "hora": "13:45",
-    "time_casa": "FK Kairat",
-    "gols_casa": 0,
-    "gols_fora": 5,
-    "time_fora": "Real Madrid CF"
-  },
-  {
-    "dia": "04/10/2025",
+    "dia": "13/06/2026",
     "hora": "16:00",
-    "time_casa": "Real Madrid CF",
-    "gols_casa": 3,
-    "gols_fora": 1,
-    "time_fora": "Villarreal CF"
+    "time_casa": "Catar",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Suíça"
   },
   {
-    "dia": "19/10/2025",
+    "dia": "13/06/2026",
+    "hora": "19:00",
+    "time_casa": "Brasil",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Marrocos"
+  },
+  {
+    "dia": "13/06/2026",
+    "hora": "22:00",
+    "time_casa": "Haiti",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Escócia"
+  },
+  {
+    "dia": "14/06/2026",
+    "hora": "14:00",
+    "time_casa": "Alemanha",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Curaçau"
+  },
+  {
+    "dia": "14/06/2026",
+    "hora": "17:00",
+    "time_casa": "Países Baixos",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Japão"
+  },
+  {
+    "dia": "14/06/2026",
+    "hora": "20:00",
+    "time_casa": "Costa do Marfim",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Equador"
+  },
+  {
+    "dia": "14/06/2026",
+    "hora": "23:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Tunísia"
+  },
+  {
+    "dia": "15/06/2026",
+    "hora": "13:00",
+    "time_casa": "Espanha",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Cabo Verde"
+  },
+  {
+    "dia": "15/06/2026",
     "hora": "16:00",
-    "time_casa": "Getafe CF",
-    "gols_casa": 0,
-    "gols_fora": 1,
-    "time_fora": "Real Madrid CF"
+    "time_casa": "Bélgica",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Egito"
   },
   {
-    "dia": "22/10/2025",
+    "dia": "15/06/2026",
+    "hora": "19:00",
+    "time_casa": "Arábia Saudita",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Uruguai"
+  },
+  {
+    "dia": "15/06/2026",
+    "hora": "22:00",
+    "time_casa": "República Islâmica do Irã",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Nova Zelândia"
+  },
+  {
+    "dia": "16/06/2026",
     "hora": "16:00",
-    "time_casa": "Real Madrid CF",
-    "gols_casa": 1,
-    "gols_fora": 0,
-    "time_fora": "Juventus FC"
+    "time_casa": "França",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Senegal"
   },
   {
-    "dia": "26/10/2025",
-    "hora": "12:15",
-    "time_casa": "Real Madrid CF",
-    "gols_casa": 2,
-    "gols_fora": 1,
-    "time_fora": "FC Barcelona"
+    "dia": "16/06/2026",
+    "hora": "21:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Noruega"
   },
   {
-    "dia": "01/11/2025",
+    "dia": "16/06/2026",
+    "hora": "22:00",
+    "time_casa": "Argentina",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Argélia"
+  },
+  {
+    "dia": "17/06/2026",
+    "hora": "01:00",
+    "time_casa": "Áustria",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Jordânia"
+  },
+  {
+    "dia": "17/06/2026",
+    "hora": "14:00",
+    "time_casa": "Portugal",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "17/06/2026",
+    "hora": "16:00",
+    "time_casa": "Inglaterra",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Croácia"
+  },
+  {
+    "dia": "17/06/2026",
+    "hora": "20:00",
+    "time_casa": "Gana",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Panamá"
+  },
+  {
+    "dia": "17/06/2026",
+    "hora": "23:00",
+    "time_casa": "Uzbequistão",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Colômbia"
+  },
+  {
+    "dia": "18/06/2026",
+    "hora": "13:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "África do Sul"
+  },
+  {
+    "dia": "18/06/2026",
+    "hora": "16:00",
+    "time_casa": "Suíça",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "18/06/2026",
+    "hora": "19:00",
+    "time_casa": "Canadá",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Catar"
+  },
+  {
+    "dia": "18/06/2026",
+    "hora": "23:00",
+    "time_casa": "México",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Coreia do Sul"
+  },
+  {
+    "dia": "19/06/2026",
+    "hora": "01:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Paraguai"
+  },
+  {
+    "dia": "19/06/2026",
+    "hora": "16:00",
+    "time_casa": "Estados Unidos",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Austrália"
+  },
+  {
+    "dia": "19/06/2026",
+    "hora": "19:00",
+    "time_casa": "Escócia",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Marrocos"
+  },
+  {
+    "dia": "19/06/2026",
+    "hora": "22:00",
+    "time_casa": "Brasil",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Haiti"
+  },
+  {
+    "dia": "20/06/2026",
+    "hora": "01:00",
+    "time_casa": "Tunísia",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Japão"
+  },
+  {
+    "dia": "20/06/2026",
+    "hora": "14:00",
+    "time_casa": "Países Baixos",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "20/06/2026",
     "hora": "17:00",
-    "time_casa": "Real Madrid CF",
-    "gols_casa": 4,
-    "gols_fora": 0,
-    "time_fora": "Valencia CF"
+    "time_casa": "Alemanha",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Costa do Marfim"
   },
   {
-    "dia": "04/11/2025",
+    "dia": "20/06/2026",
+    "hora": "21:00",
+    "time_casa": "Equador",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Curaçau"
+  },
+  {
+    "dia": "21/06/2026",
+    "hora": "13:00",
+    "time_casa": "Espanha",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Arábia Saudita"
+  },
+  {
+    "dia": "21/06/2026",
+    "hora": "16:00",
+    "time_casa": "Bélgica",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "República Islâmica do Irã"
+  },
+  {
+    "dia": "21/06/2026",
+    "hora": "19:00",
+    "time_casa": "Uruguai",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Cabo Verde"
+  },
+  {
+    "dia": "21/06/2026",
+    "hora": "22:00",
+    "time_casa": "Nova Zelândia",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Egito"
+  },
+  {
+    "dia": "22/06/2026",
+    "hora": "14:00",
+    "time_casa": "Argentina",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Áustria"
+  },
+  {
+    "dia": "22/06/2026",
+    "hora": "18:00",
+    "time_casa": "França",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "22/06/2026",
+    "hora": "21:00",
+    "time_casa": "Noruega",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Senegal"
+  },
+  {
+    "dia": "22/06/2026",
+    "hora": "22:00",
+    "time_casa": "Jordânia",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Argélia"
+  },
+  {
+    "dia": "23/06/2026",
+    "hora": "14:00",
+    "time_casa": "Portugal",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Uzbequistão"
+  },
+  {
+    "dia": "23/06/2026",
     "hora": "17:00",
-    "time_casa": "Liverpool FC",
-    "gols_casa": 1,
-    "gols_fora": 0,
-    "time_fora": "Real Madrid CF"
+    "time_casa": "Inglaterra",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Gana"
   },
   {
-    "dia": "09/11/2025",
-    "hora": "12:15",
-    "time_casa": "Rayo Vallecano de Madrid",
-    "gols_casa": 0,
-    "gols_fora": 0,
-    "time_fora": "Real Madrid CF"
+    "dia": "23/06/2026",
+    "hora": "20:00",
+    "time_casa": "Panamá",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Croácia"
   },
   {
-    "dia": "23/11/2025",
+    "dia": "23/06/2026",
+    "hora": "23:00",
+    "time_casa": "Colômbia",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "24/06/2026",
+    "hora": "16:00",
+    "time_casa": "Suíça",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Canadá"
+  },
+  {
+    "dia": "24/06/2026",
+    "hora": "16:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Catar"
+  },
+  {
+    "dia": "24/06/2026",
+    "hora": "19:00",
+    "time_casa": "Marrocos",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Haiti"
+  },
+  {
+    "dia": "24/06/2026",
+    "hora": "19:00",
+    "time_casa": "Escócia",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Brasil"
+  },
+  {
+    "dia": "24/06/2026",
+    "hora": "22:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "México"
+  },
+  {
+    "dia": "24/06/2026",
+    "hora": "22:00",
+    "time_casa": "África do Sul",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Coreia do Sul"
+  },
+  {
+    "dia": "25/06/2026",
     "hora": "17:00",
-    "time_casa": "Elche CF",
-    "gols_casa": 2,
-    "gols_fora": 2,
-    "time_fora": "Real Madrid CF"
+    "time_casa": "Equador",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Alemanha"
   },
   {
-    "dia": "26/11/2025",
+    "dia": "25/06/2026",
     "hora": "17:00",
-    "time_casa": "PAE Olympiakos SFP",
-    "gols_casa": 3,
-    "gols_fora": 4,
-    "time_fora": "Real Madrid CF"
+    "time_casa": "Curaçau",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Costa do Marfim"
   },
   {
-    "dia": "30/11/2025",
+    "dia": "25/06/2026",
+    "hora": "20:00",
+    "time_casa": "Tunísia",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Países Baixos"
+  },
+  {
+    "dia": "25/06/2026",
+    "hora": "20:00",
+    "time_casa": "Japão",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "25/06/2026",
+    "hora": "23:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Estados Unidos"
+  },
+  {
+    "dia": "25/06/2026",
+    "hora": "23:00",
+    "time_casa": "Paraguai",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Austrália"
+  },
+  {
+    "dia": "26/06/2026",
+    "hora": "16:00",
+    "time_casa": "Noruega",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "França"
+  },
+  {
+    "dia": "26/06/2026",
+    "hora": "16:00",
+    "time_casa": "Senegal",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "26/06/2026",
+    "hora": "21:00",
+    "time_casa": "Uruguai",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Espanha"
+  },
+  {
+    "dia": "26/06/2026",
+    "hora": "21:00",
+    "time_casa": "Cabo Verde",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Arábia Saudita"
+  },
+  {
+    "dia": "27/06/2026",
+    "hora": "00:00",
+    "time_casa": "Nova Zelândia",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Bélgica"
+  },
+  {
+    "dia": "27/06/2026",
+    "hora": "00:00",
+    "time_casa": "Egito",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "República Islâmica do Irã"
+  },
+  {
+    "dia": "27/06/2026",
+    "hora": "18:00",
+    "time_casa": "Panamá",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Inglaterra"
+  },
+  {
+    "dia": "27/06/2026",
+    "hora": "18:00",
+    "time_casa": "Croácia",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Gana"
+  },
+  {
+    "dia": "27/06/2026",
+    "hora": "20:30",
+    "time_casa": "Colômbia",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Portugal"
+  },
+  {
+    "dia": "27/06/2026",
+    "hora": "20:30",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Uzbequistão"
+  },
+  {
+    "dia": "27/06/2026",
+    "hora": "23:00",
+    "time_casa": "Jordânia",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Argentina"
+  },
+  {
+    "dia": "27/06/2026",
+    "hora": "23:00",
+    "time_casa": "Argélia",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Áustria"
+  },
+  {
+    "dia": "28/06/2026",
+    "hora": "16:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "29/06/2026",
+    "hora": "14:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "29/06/2026",
+    "hora": "17:30",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "29/06/2026",
+    "hora": "22:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "30/06/2026",
+    "hora": "14:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "30/06/2026",
+    "hora": "18:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "30/06/2026",
+    "hora": "22:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "01/07/2026",
+    "hora": "13:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "01/07/2026",
     "hora": "17:00",
-    "time_casa": "Girona FC",
-    "gols_casa": 1,
-    "gols_fora": 1,
-    "time_fora": "Real Madrid CF"
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
   },
   {
-    "dia": "03/12/2025",
+    "dia": "01/07/2026",
+    "hora": "21:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "02/07/2026",
+    "hora": "16:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "02/07/2026",
+    "hora": "20:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "03/07/2026",
+    "hora": "00:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "03/07/2026",
     "hora": "15:00",
-    "time_casa": "Athletic Club",
-    "gols_casa": 0,
-    "gols_fora": 3,
-    "time_fora": "Real Madrid CF"
-  },
-  {
-    "dia": "07/12/2025",
-    "hora": "17:00",
-    "time_casa": "Real Madrid CF",
-    "gols_casa": 0,
-    "gols_fora": 2,
-    "time_fora": "RC Celta de Vigo"
-  },
-  {
-    "dia": "10/12/2025",
-    "hora": "17:00",
-    "time_casa": "Real Madrid CF",
-    "gols_casa": 1,
-    "gols_fora": 2,
-    "time_fora": "Manchester City FC"
-  },
-  {
-    "dia": "14/12/2025",
-    "hora": "17:00",
-    "time_casa": "Deportivo Alavés",
-    "gols_casa": 1,
-    "gols_fora": 2,
-    "time_fora": "Real Madrid CF"
-  },
-  {
-    "dia": "20/12/2025",
-    "hora": "17:00",
-    "time_casa": "Real Madrid CF",
-    "gols_casa": 2,
-    "gols_fora": 0,
-    "time_fora": "Sevilla FC"
-  },
-  {
-    "dia": "04/01/2026",
-    "hora": "12:15",
-    "time_casa": "Real Madrid CF",
-    "gols_casa": 5,
-    "gols_fora": 1,
-    "time_fora": "Real Betis Balompié"
-  },
-  {
-    "dia": "17/01/2026",
-    "hora": "10:00",
-    "time_casa": "Real Madrid CF",
-    "gols_casa": 2,
-    "gols_fora": 0,
-    "time_fora": "Levante UD"
-  },
-  {
-    "dia": "20/01/2026",
-    "hora": "17:00",
-    "time_casa": "Real Madrid CF",
-    "gols_casa": 6,
-    "gols_fora": 1,
-    "time_fora": "AS Monaco FC"
-  },
-  {
-    "dia": "24/01/2026",
-    "hora": "17:00",
-    "time_casa": "Villarreal CF",
-    "gols_casa": 0,
-    "gols_fora": 2,
-    "time_fora": "Real Madrid CF"
-  },
-  {
-    "dia": "28/01/2026",
-    "hora": "17:00",
-    "time_casa": "Sport Lisboa e Benfica",
-    "gols_casa": 4,
-    "gols_fora": 2,
-    "time_fora": "Real Madrid CF"
-  },
-  {
-    "dia": "01/02/2026",
-    "hora": "10:00",
-    "time_casa": "Real Madrid CF",
-    "gols_casa": 2,
-    "gols_fora": 1,
-    "time_fora": "Rayo Vallecano de Madrid"
-  },
-  {
-    "dia": "08/02/2026",
-    "hora": "17:00",
-    "time_casa": "Valencia CF",
-    "gols_casa": 0,
-    "gols_fora": 2,
-    "time_fora": "Real Madrid CF"
-  },
-  {
-    "dia": "14/02/2026",
-    "hora": "17:00",
-    "time_casa": "Real Madrid CF",
-    "gols_casa": 4,
-    "gols_fora": 1,
-    "time_fora": "Real Sociedad de Fútbol"
-  },
-  {
-    "dia": "17/02/2026",
-    "hora": "17:00",
-    "time_casa": "Sport Lisboa e Benfica",
-    "gols_casa": 0,
-    "gols_fora": 1,
-    "time_fora": "Real Madrid CF"
-  },
-  {
-    "dia": "21/02/2026",
-    "hora": "14:30",
-    "time_casa": "CA Osasuna",
-    "gols_casa": 2,
-    "gols_fora": 1,
-    "time_fora": "Real Madrid CF"
-  },
-  {
-    "dia": "25/02/2026",
-    "hora": "17:00",
-    "time_casa": "Real Madrid CF",
-    "gols_casa": 2,
-    "gols_fora": 1,
-    "time_fora": "Sport Lisboa e Benfica"
-  },
-  {
-    "dia": "02/03/2026",
-    "hora": "17:00",
-    "time_casa": "Real Madrid CF",
-    "gols_casa": 0,
-    "gols_fora": 1,
-    "time_fora": "Getafe CF"
-  },
-  {
-    "dia": "06/03/2026",
-    "hora": "17:00",
-    "time_casa": "RC Celta de Vigo",
-    "gols_casa": 1,
-    "gols_fora": 2,
-    "time_fora": "Real Madrid CF"
-  },
-  {
-    "dia": "11/03/2026",
-    "hora": "17:00",
-    "time_casa": "Real Madrid CF",
-    "gols_casa": 3,
-    "gols_fora": 0,
-    "time_fora": "Manchester City FC"
-  },
-  {
-    "dia": "14/03/2026",
-    "hora": "17:00",
-    "time_casa": "Real Madrid CF",
+    "time_casa": null,
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Elche CF"
+    "time_fora": null
   },
   {
-    "dia": "17/03/2026",
-    "hora": "17:00",
-    "time_casa": "Manchester City FC",
+    "dia": "03/07/2026",
+    "hora": "19:00",
+    "time_casa": null,
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Real Madrid CF"
+    "time_fora": null
   },
   {
-    "dia": "22/03/2026",
-    "hora": "17:00",
-    "time_casa": "Real Madrid CF",
+    "dia": "03/07/2026",
+    "hora": "22:30",
+    "time_casa": null,
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Club Atlético de Madrid"
+    "time_fora": null
   },
   {
-    "dia": "04/04/2026",
+    "dia": "04/07/2026",
+    "hora": "14:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "04/07/2026",
+    "hora": "18:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "05/07/2026",
+    "hora": "17:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "05/07/2026",
     "hora": "21:00",
-    "time_casa": "RCD Mallorca",
+    "time_casa": null,
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Real Madrid CF"
+    "time_fora": null
   },
   {
-    "dia": "11/04/2026",
-    "hora": "21:00",
-    "time_casa": "Real Madrid CF",
+    "dia": "06/07/2026",
+    "hora": "16:00",
+    "time_casa": null,
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Girona FC"
+    "time_fora": null
   },
   {
-    "dia": "21/04/2026",
+    "dia": "06/07/2026",
     "hora": "21:00",
-    "time_casa": "Real Madrid CF",
+    "time_casa": null,
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Deportivo Alavés"
+    "time_fora": null
   },
   {
-    "dia": "25/04/2026",
-    "hora": "21:00",
-    "time_casa": "Real Betis Balompié",
+    "dia": "07/07/2026",
+    "hora": "13:00",
+    "time_casa": null,
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Real Madrid CF"
+    "time_fora": null
   },
   {
-    "dia": "02/05/2026",
-    "hora": "21:00",
-    "time_casa": "RCD Espanyol de Barcelona",
+    "dia": "07/07/2026",
+    "hora": "17:00",
+    "time_casa": null,
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Real Madrid CF"
+    "time_fora": null
   },
   {
-    "dia": "09/05/2026",
-    "hora": "21:00",
-    "time_casa": "FC Barcelona",
+    "dia": "09/07/2026",
+    "hora": "17:00",
+    "time_casa": null,
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Real Madrid CF"
+    "time_fora": null
   },
   {
-    "dia": "12/05/2026",
-    "hora": "21:00",
-    "time_casa": "Real Madrid CF",
+    "dia": "10/07/2026",
+    "hora": "16:00",
+    "time_casa": null,
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Real Oviedo"
+    "time_fora": null
   },
   {
-    "dia": "16/05/2026",
-    "hora": "21:00",
-    "time_casa": "Sevilla FC",
+    "dia": "11/07/2026",
+    "hora": "18:00",
+    "time_casa": null,
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Real Madrid CF"
+    "time_fora": null
   },
   {
-    "dia": "23/05/2026",
-    "hora": "21:00",
-    "time_casa": "Real Madrid CF",
+    "dia": "11/07/2026",
+    "hora": "22:00",
+    "time_casa": null,
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Athletic Club"
+    "time_fora": null
+  },
+  {
+    "dia": "14/07/2026",
+    "hora": "16:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "15/07/2026",
+    "hora": "16:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "18/07/2026",
+    "hora": "18:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
+  },
+  {
+    "dia": "19/07/2026",
+    "hora": "16:00",
+    "time_casa": null,
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": null
   }
 ]
