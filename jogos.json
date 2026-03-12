@@ -1,0 +1,402 @@
+[
+  {
+    "dia": "19/08/2025",
+    "hora": "16:00",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": 1,
+    "gols_fora": 0,
+    "time_fora": "CA Osasuna"
+  },
+  {
+    "dia": "24/08/2025",
+    "hora": "16:30",
+    "time_casa": "Real Oviedo",
+    "gols_casa": 0,
+    "gols_fora": 3,
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "30/08/2025",
+    "hora": "16:30",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": 2,
+    "gols_fora": 1,
+    "time_fora": "RCD Mallorca"
+  },
+  {
+    "dia": "13/09/2025",
+    "hora": "11:15",
+    "time_casa": "Real Sociedad de Fútbol",
+    "gols_casa": 1,
+    "gols_fora": 2,
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "16/09/2025",
+    "hora": "16:00",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": 2,
+    "gols_fora": 1,
+    "time_fora": "Olympique de Marseille"
+  },
+  {
+    "dia": "20/09/2025",
+    "hora": "11:15",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": 2,
+    "gols_fora": 0,
+    "time_fora": "RCD Espanyol de Barcelona"
+  },
+  {
+    "dia": "23/09/2025",
+    "hora": "16:30",
+    "time_casa": "Levante UD",
+    "gols_casa": 1,
+    "gols_fora": 4,
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "27/09/2025",
+    "hora": "11:15",
+    "time_casa": "Club Atlético de Madrid",
+    "gols_casa": 5,
+    "gols_fora": 2,
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "30/09/2025",
+    "hora": "13:45",
+    "time_casa": "FK Kairat",
+    "gols_casa": 0,
+    "gols_fora": 5,
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "04/10/2025",
+    "hora": "16:00",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": 3,
+    "gols_fora": 1,
+    "time_fora": "Villarreal CF"
+  },
+  {
+    "dia": "19/10/2025",
+    "hora": "16:00",
+    "time_casa": "Getafe CF",
+    "gols_casa": 0,
+    "gols_fora": 1,
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "22/10/2025",
+    "hora": "16:00",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": 1,
+    "gols_fora": 0,
+    "time_fora": "Juventus FC"
+  },
+  {
+    "dia": "26/10/2025",
+    "hora": "12:15",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": 2,
+    "gols_fora": 1,
+    "time_fora": "FC Barcelona"
+  },
+  {
+    "dia": "01/11/2025",
+    "hora": "17:00",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": 4,
+    "gols_fora": 0,
+    "time_fora": "Valencia CF"
+  },
+  {
+    "dia": "04/11/2025",
+    "hora": "17:00",
+    "time_casa": "Liverpool FC",
+    "gols_casa": 1,
+    "gols_fora": 0,
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "09/11/2025",
+    "hora": "12:15",
+    "time_casa": "Rayo Vallecano de Madrid",
+    "gols_casa": 0,
+    "gols_fora": 0,
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "23/11/2025",
+    "hora": "17:00",
+    "time_casa": "Elche CF",
+    "gols_casa": 2,
+    "gols_fora": 2,
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "26/11/2025",
+    "hora": "17:00",
+    "time_casa": "PAE Olympiakos SFP",
+    "gols_casa": 3,
+    "gols_fora": 4,
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "30/11/2025",
+    "hora": "17:00",
+    "time_casa": "Girona FC",
+    "gols_casa": 1,
+    "gols_fora": 1,
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "03/12/2025",
+    "hora": "15:00",
+    "time_casa": "Athletic Club",
+    "gols_casa": 0,
+    "gols_fora": 3,
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "07/12/2025",
+    "hora": "17:00",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": 0,
+    "gols_fora": 2,
+    "time_fora": "RC Celta de Vigo"
+  },
+  {
+    "dia": "10/12/2025",
+    "hora": "17:00",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": 1,
+    "gols_fora": 2,
+    "time_fora": "Manchester City FC"
+  },
+  {
+    "dia": "14/12/2025",
+    "hora": "17:00",
+    "time_casa": "Deportivo Alavés",
+    "gols_casa": 1,
+    "gols_fora": 2,
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "20/12/2025",
+    "hora": "17:00",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": 2,
+    "gols_fora": 0,
+    "time_fora": "Sevilla FC"
+  },
+  {
+    "dia": "04/01/2026",
+    "hora": "12:15",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": 5,
+    "gols_fora": 1,
+    "time_fora": "Real Betis Balompié"
+  },
+  {
+    "dia": "17/01/2026",
+    "hora": "10:00",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": 2,
+    "gols_fora": 0,
+    "time_fora": "Levante UD"
+  },
+  {
+    "dia": "20/01/2026",
+    "hora": "17:00",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": 6,
+    "gols_fora": 1,
+    "time_fora": "AS Monaco FC"
+  },
+  {
+    "dia": "24/01/2026",
+    "hora": "17:00",
+    "time_casa": "Villarreal CF",
+    "gols_casa": 0,
+    "gols_fora": 2,
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "28/01/2026",
+    "hora": "17:00",
+    "time_casa": "Sport Lisboa e Benfica",
+    "gols_casa": 4,
+    "gols_fora": 2,
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "01/02/2026",
+    "hora": "10:00",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": 2,
+    "gols_fora": 1,
+    "time_fora": "Rayo Vallecano de Madrid"
+  },
+  {
+    "dia": "08/02/2026",
+    "hora": "17:00",
+    "time_casa": "Valencia CF",
+    "gols_casa": 0,
+    "gols_fora": 2,
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "14/02/2026",
+    "hora": "17:00",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": 4,
+    "gols_fora": 1,
+    "time_fora": "Real Sociedad de Fútbol"
+  },
+  {
+    "dia": "17/02/2026",
+    "hora": "17:00",
+    "time_casa": "Sport Lisboa e Benfica",
+    "gols_casa": 0,
+    "gols_fora": 1,
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "21/02/2026",
+    "hora": "14:30",
+    "time_casa": "CA Osasuna",
+    "gols_casa": 2,
+    "gols_fora": 1,
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "25/02/2026",
+    "hora": "17:00",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": 2,
+    "gols_fora": 1,
+    "time_fora": "Sport Lisboa e Benfica"
+  },
+  {
+    "dia": "02/03/2026",
+    "hora": "17:00",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": 0,
+    "gols_fora": 1,
+    "time_fora": "Getafe CF"
+  },
+  {
+    "dia": "06/03/2026",
+    "hora": "17:00",
+    "time_casa": "RC Celta de Vigo",
+    "gols_casa": 1,
+    "gols_fora": 2,
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "11/03/2026",
+    "hora": "17:00",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": 3,
+    "gols_fora": 0,
+    "time_fora": "Manchester City FC"
+  },
+  {
+    "dia": "14/03/2026",
+    "hora": "17:00",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Elche CF"
+  },
+  {
+    "dia": "17/03/2026",
+    "hora": "17:00",
+    "time_casa": "Manchester City FC",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "22/03/2026",
+    "hora": "17:00",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Club Atlético de Madrid"
+  },
+  {
+    "dia": "04/04/2026",
+    "hora": "21:00",
+    "time_casa": "RCD Mallorca",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "11/04/2026",
+    "hora": "21:00",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Girona FC"
+  },
+  {
+    "dia": "21/04/2026",
+    "hora": "21:00",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Deportivo Alavés"
+  },
+  {
+    "dia": "25/04/2026",
+    "hora": "21:00",
+    "time_casa": "Real Betis Balompié",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "02/05/2026",
+    "hora": "21:00",
+    "time_casa": "RCD Espanyol de Barcelona",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "09/05/2026",
+    "hora": "21:00",
+    "time_casa": "FC Barcelona",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "12/05/2026",
+    "hora": "21:00",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Real Oviedo"
+  },
+  {
+    "dia": "16/05/2026",
+    "hora": "21:00",
+    "time_casa": "Sevilla FC",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Real Madrid CF"
+  },
+  {
+    "dia": "23/05/2026",
+    "hora": "21:00",
+    "time_casa": "Real Madrid CF",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "time_fora": "Athletic Club"
+  }
+]
