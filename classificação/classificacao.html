@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolão da Copa</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            background-color: #1f4f0c;
+            padding: 0;
+            display: flex;
+        }
+
+        ul li a {
+            display: block;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            background-color: #1f4f0c;
+        }
+    </style>
+</head>
+
+<body style="margin: 0;">
+    <header
+        style="background-color: #1f4f0c; font-family: 'Trebuchet MS', sans-serif; display: flex;gap: 64px;height: 70px;justify-content: center;align-items: center;">
+        <h1 style="color: white;">Bolão da Copa do Mundo 2026</h1>
+    </header>
+    <nav class="navbar">
+        <ul style="font-family:'Trebuchet MS', sans-serif;">
+            <li><a href="/Inicio/inicio.html">Início</a></li>
+            <li><a href="/classificação/classificacao.html">Classificação</a></li>
+            <li><a href="/historico.html">Histórico</a></li>
+            <li><a href="/participantes.html">Participantes</a></li>
+        </ul>
+    </nav>
+    <div class="container"
+        style="font-family:'Trebuchet MS', sans-serif; display: flex; flex-direction: column; align-items: center;">
+        <h2>Tabela de pontos</h2>
+
+        <div id="loading">Carregando jogos...</div>
+        <div id="error" style="display: none;"></div>
+
+        <div id="tables"
+            style="display: none; display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap; gap: 20px;">
+        </div>
+
+    </div>
+
+    <script>
+        function carregarClassificacao() {
+            fetch('classificacao.json')
+                .then(res => res.json())
+                .then(classificacao => {
+                    document.getElementById('loading').style.display = 'none';
+                    document.getElementById('tables').style.display = 'block';
+
+                    const tablesDiv = document.getElementById('tables');
+                    tablesDiv.innerHTML = '';
+
+                    classificacao.forEach(grupo => {
+                        const groupDiv = document.createElement('div');
+                        groupDiv.style.width = '300px';
+                        groupDiv.style.display = 'flex';
+                        groupDiv.style.flexDirection = 'column';
+                        groupDiv.style.alignItems = 'center';
+
+                        const groupTitle = document.createElement('h3');
+                        groupTitle.textContent = grupo.grupo;
+                        groupDiv.appendChild(groupTitle);
+
+                        const table = document.createElement('table');
+                        table.style.borderCollapse = 'collapse';
+                        table.style.width = '100%';
+                        table.style.maxWidth = '300px';
+                        const thead = document.createElement('thead');
+                        thead.innerHTML = `
+                            <tr>
+                                <th style="border: 1px solid #ddd; padding: 8px;">Posição</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">Time</th>
+                                <th style="border: 1px solid #ddd; padding: 8px;">Pontos</th>
+                            </tr>
+                        `;
+                        table.appendChild(thead);
+
+                        const tbody = document.createElement('tbody');
+                        grupo.times.forEach(time => {
+                            const row = document.createElement('tr');
+                            row.innerHTML = `
+                                <td style="border: 1px solid #ddd; padding: 8px;">${time.position}</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">${time.team || 'A definir'}</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">${time.points}</td>
+                            `;
+                            tbody.appendChild(row);
+                        });
+                        table.appendChild(tbody);
+
+                        groupDiv.appendChild(table);
+                        tablesDiv.appendChild(groupDiv);
+                    });
+                })
+                .catch(err => {
+                    document.getElementById('loading').style.display = 'none';
+                    const errorDiv = document.getElementById('error');
+                    errorDiv.style.display = 'block';
+                    errorDiv.textContent = 'Erro ao carregar a classificação: ' + err.message;
+                });
+        }
+
+        window.onload = carregarClassificacao;
+    </script>
+</body>
+
+</html>
