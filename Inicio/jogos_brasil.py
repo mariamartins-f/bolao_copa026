@@ -46,16 +46,18 @@ if response.status_code == 200:
             'gols_fora': gols_fora,
             'time_fora': time_fora
         }
+
+
         jogos.append(jogo)
     
     # Salvar JSON
     with open('jogos.json', 'w', encoding='utf-8') as f:
         json.dump(jogos, f, ensure_ascii=False, indent=2)
     
-    print(f"✅ {len(jogos)} jogos salvos em jogos.json")
+    print(f"{len(jogos)} jogos salvos em jogos.json")
     
     # Mostrar exemplo
     if jogos:
         print(f"\nExemplo: {jogos[0]['dia']} | {jogos[0]['hora']} | {jogos[0]['time_casa']} | {jogos[0]['gols_casa']} | x | {jogos[0]['gols_fora']} | {jogos[0]['time_fora']}")
 else:
-    print(f"❌ Erro: {response.status_code}")
+    print(f"Erro: {response.status_code}")
