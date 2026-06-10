@@ -1,0 +1,44 @@
+[
+  {
+    "usuario": "maria",
+    "senha": "maria123",
+    "nome": "Maria Isabel",
+    "modalidade": "completo"
+  },
+  {
+    "usuario": "bruno",
+    "senha": "bruno123",
+    "nome": "Bruno",
+    "modalidade": "completo"
+  },
+  {
+    "usuario": "rodrigo",
+    "senha": "rodrigo123",
+    "nome": "Rodrigo",
+    "modalidade": "brasil_apenas"
+  },
+  {
+    "usuario": "luciana",
+    "senha": "luciana123",
+    "nome": "Luciana",
+    "modalidade": "completo"
+  },
+  {
+    "usuario": "claudia",
+    "senha": "claudia123",
+    "nome": "Cláudia",
+    "modalidade": "brasil_apenas"
+  },
+  {
+    "usuario": "manuela",
+    "senha": "manuela123",
+    "nome": "Manuela",
+    "modalidade": "completo"
+  },
+  {
+    "usuario": "daniel",
+    "senha": "daniel123",
+    "nome": "Daniel",
+    "modalidade": "completo"
+  }
+]

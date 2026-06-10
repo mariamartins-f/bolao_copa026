@@ -9,7 +9,7 @@ app.secret_key = 'copa2026_bolao_dos_amigos_secreto_gols'
 JOGOS_JSON = 'Inicio/jogos.json'
 PALPITES_JSON = 'palpites.json'
 USUARIOS_JSON = 'usuarios.json'
-CLASSIFICACAO_JSON = 'classificação/classificacao.json'
+CLASSIFICACAO_JSON = 'classificacao.json'
 
 def carregar_json(caminho, padrao=[]):
     if not os.path.exists(caminho):
@@ -28,17 +28,28 @@ def calcular_pontos_jogo(gols_casa_real, gols_fora_real, gols_casa_palpite, gols
         return 0, 0, 0
     try:
         real_c, real_f = int(gols_casa_real), int(gols_fora_real)
-        palp_c, palp_f = int(gols_casa_palpite), int(gols_fora_palpite)
+        palp_c, palindrome_f = int(gols_casa_palpite), int(gols_fora_palpite)
     except (ValueError, TypeError):
         return 0, 0, 0
 
-    if real_c == palp_c and real_f == palp_f:
+    if real_c == palp_c and real_f == palindrome_f:
         return 2, 1, 0  # Placar exato
-    if (real_c > real_f and palp_c > palp_f) or \
-       (real_f > real_c and palp_f > palp_f) or \
-       (real_c == real_f and palp_c == palp_f):
-        return 1, 0, 1  # Vendedor/Empate
+
+    if (real_c > real_f and palp_c > palindrome_f) or \
+       (real_f > real_c and palindrome_f > palp_c) or \
+       (real_c == real_f and palp_c == palindrome_f):
+        return 1, 0, 1  # Vencedor ou Empate
+
     return 0, 0, 0
+
+# --- ROTAS DE SERVIÇO DE ARQUIVOS ESTÁTICOS ---
+@app.route('/')
+def index():
+    return send_from_directory('.', 'login.html')
+
+@app.route('/<path:path>')
+def servir_arquivos(path):
+    return send_from_directory('.', path)
 
 # --- LOGIN COM NOMES COMPLETOS CORRIGIDOS ---
 @app.route('/api/login', methods=['POST'])
@@ -47,7 +58,6 @@ def login():
     usuario_input = dados.get('usuario')
     senha_input = dados.get('senha')
     
-    # IMPORTANTE: Nomes corrigidos para aparecerem completos nas tabelas!
     usuarios_padrao = [
         {"usuario": "maria", "senha": "maria123", "nome": "Maria Isabel", "modalidade": "completo"},
         {"usuario": "bruno", "senha": "bruno123", "nome": "Bruno", "modalidade": "completo"},
@@ -58,7 +68,6 @@ def login():
         {"usuario": "daniel", "senha": "daniel123", "nome": "Daniel", "modalidade": "completo"}
     ]
     
-    # Se o seu usuarios.json antigo existir, delete-o para carregar essa lista nova!
     usuarios = carregar_json(USUARIOS_JSON, padrao=usuarios_padrao)
     user = next((u for u in usuarios if u['usuario'] == usuario_input and u['senha'] == senha_input), None)
     
@@ -69,25 +78,22 @@ def login():
         return jsonify({"sucesso": True, "nome": user['nome']})
     return jsonify({"sucesso": False, "mensagem": "Usuário ou senha incorretos."}), 401
 
-# --- ROTA PARA CONSEGUIR LISTA DE JOGOS FILTRADA ---
+# --- ROTA PARA CONSEGUIR LISTA DE JOGOS FILTRADA E PAGINADA ---
 @app.route('/api/jogos_por_escolha', methods=['GET'])
 def jogos_por_escolha():
-    escolha = request.args.get('tipo', 'geral') # 'geral' ou 'brasil'
+    escolha = request.args.get('tipo', 'geral')
     jogos = carregar_json(JOGOS_JSON)
     agora = datetime.now()
     
     jogos_filtrados = []
     for idx, jogo in enumerate(jogos):
-        # Ignora jogos não definidos administrativamente pela FIFA
         if "A definir" in jogo['time_casa'] or "A definir" in jogo['time_fora']:
             continue
             
-        # Filtra caso a escolha seja apenas os jogos do Brasil
         if escolha == 'brasil' and jogo['tipo'] != 'brasil':
             continue
             
         data_jogo = datetime.fromisoformat(jogo['data_iso'])
-        # Verifica se o jogo está bloqueado para apostas (menos de 15 minutos do início ou finalizado)
         bloqueado = (jogo['status'] == 'FINISHED' or agora >= (data_jogo - timedelta(minutes=15)))
         
         jogo_copia = jogo.copy()
@@ -119,7 +125,7 @@ def salvar_palpites():
         data_jogo = datetime.fromisoformat(jogo['data_iso'])
         
         if jogo['status'] == 'FINISHED' or agora >= (data_jogo - timedelta(minutes=15)):
-            continue # Bloqueia gravação se violar o limite de tempo
+            continue 
 
         palpites_usuario[idx_str] = {
             "casa": int(palpite['casa']),
@@ -178,23 +184,15 @@ def obter_ranking_e_historico():
 
     return jsonify({"ranking_geral": ordenado_completo, "ranking_brasil": ordenado_brasil})
 
-# --- ROTA OFICIAL: CLASSIFICAÇÃO DE TODOS OS GRUPOS DA COPA 2026 ---
-# --- ROTA CORRIGIDA: LÊ DIRETAMENTE O JSON DO SEU SCRIPT DE CLASSIFICAÇÃO ---
+# --- CLASSIFICAÇÃO DOS GRUPOS DIRETAMENTE DO SCRIPT ---
 @app.route('/api/grupos_copa', methods=['GET'])
 def obter_grupos_copa():
-    # Caminho do ficheiro que o seu grupos_classifica.py gera
-    caminho_classificacao = 'classificacao.json'
-    
-    dados_originais = carregar_json(caminho_classificacao, padrao=[])
-    
+    dados_originais = carregar_json(CLASSIFICACAO_JSON, padrao=[])
     grupos_formatados = {}
     
     for item in dados_originais:
-        # Transforma o padrão da API "GROUP_A" em "Grupo A"
         nome_grupo_original = item.get('grupo', 'Grupo Desconhecido')
         nome_amigavel = nome_grupo_original.replace('GROUP_', 'Grupo ')
-        
-        # O seu script já salva uma lista de 'times' com position, team e points
         grupos_formatados[nome_amigavel] = item.get('times', [])
         
     return jsonify(grupos_formatados)
