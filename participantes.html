@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bolão da Copa</title>
+    <title>Meus Palpites - Bolão</title>
     <style>
         ul {
             list-style-type: none;
@@ -24,12 +24,72 @@
         ul li a:hover {
             background-color: #1f4f0c;
         }
+
+        .jogo-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .confronto {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        .input-gols {
+            width: 40px;
+            text-align: center;
+            padding: 5px;
+            font-size: 16px;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+
+        .btn-salvar {
+            background-color: #1f4f0c;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+
+        .btn-salvar:hover {
+            background-color: #2e7d12;
+        }
+
+        .btn-carregar {
+            background-color: #1f4f0c;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+
+        .btn-carregar:hover {
+            background-color: #2e7d12;
+        }
     </style>
 </head>
 
 <body style="margin: 0;">
     <header
-        style="background-color: #1f4f0c; font-family: 'Trebuchet MS', sans-serif; display: flex;gap: 64px;height: 70px;justify-content: center;align-items: center;">
+        style="background-color: #1f4f0c; font-family: 'Trebuchet MS', sans-serif; display: flex; gap: 64px; height: 70px; justify-content: center; align-items: center;">
         <h1 style="color: white;">Bolão da Copa do Mundo 2026</h1>
     </header>
     <nav class="navbar">
@@ -41,9 +101,145 @@
         </ul>
     </nav>
 
+    <div class="container"
+        style="font-family:'Trebuchet MS', sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px;">
+        <h2>Meus Palpites</h2>
+        <p style="color: #666; margin-bottom: 20px;">Exibindo os próximos jogos baseados na data atual</p>
 
+        <div id="loading">Carregando jogos e palpites...</div>
+        <div id="error" style="display: none; color: red; font-weight: bold;"></div>
 
+        <div id="lista-jogos" style="width: 100%; display: flex; flex-direction: column; align-items: center;"></div>
+
+        <button id="btn-carregar-mais" class="btn-carregar" style="display: none;" onclick="exibirMaisJogos()">Carregar Mais Jogos</button>
+    </div>
+
+    <script>
+        let todosOsJogosFuturos = [];
+        let jogosExibidosContador = 0;
+        const JOGOS_POR_PAGINA = 10;
+
+        function carregarPalpites() {
+            // Buscando os jogos da sua rota de partidas
+            fetch('/api/jogos') 
+                .then(res => {
+                    if (!res.ok) throw new Error("Erro ao carregar dados do servidor.");
+                    return res.json();
+                })
+                .then(jogos => {
+                    document.getElementById('loading').style.display = 'none';
+
+                    const agora = new Date();
+
+                    // 1. FILTRA APENAS JOGOS FUTUROS OU EM ANDAMENTO (Ignora jogos passados se tiverem data válida)
+                    todosOsJogosFuturos = jogos.filter(jogo => {
+                        if (!jogo.data || jogo.data === '-') return true; // Se não tiver data, mantém
+                        
+                        // Tenta converter a data do JSON (Formato esperado: YYYY-MM-DDTHH:MM:SSZ ou similar)
+                        const dataJogo = new Date(jogo.data);
+                        // Se a data for válida, só mostra se o jogo for hoje ou no futuro
+                        if (!isNaN(dataJogo)) {
+                            return dataJogo >= agora || dataJogo.toDateString() === agora.toDateString();
+                        }
+                        return true;
+                    });
+
+                    // Se não houver jogos futuros filtrados, usa a lista completa para não deixar a página vazia
+                    if (todosOsJogosFuturos.length === 0) {
+                        todosOsJogosFuturos = jogos;
+                    }
+
+                    // Reset do painel e exibição dos primeiros 10
+                    jogosExibidosContador = 0;
+                    document.getElementById('lista-jogos').innerHTML = '';
+                    exibirMaisJogos();
+                })
+                .catch(err => {
+                    document.getElementById('loading').style.display = 'none';
+                    const errorDiv = document.getElementById('error');
+                    errorDiv.style.display = 'block';
+                    errorDiv.textContent = 'Erro: ' + err.message;
+                });
+        }
+
+        function exibirMaisJogos() {
+            const container = document.getElementById('lista-jogos');
+            const fimDoLimite = Math.min(jogosExibidosContador + JOGOS_POR_PAGINA, todosOsJogosFuturos.length);
+            
+            // Pega o pedaço dos próximos 10 jogos da lista
+            const fatiaJogos = todosOsJogosFuturos.slice(jogosExibidosContador, fimDoLimite);
+
+            fatiaJogos.forEach(jogo => {
+                const card = document.createElement('div');
+                card.className = 'jogo-card';
+
+                // Formatação simples da data para exibição amigável ao usuário
+                let dataFormatada = jogo.data || 'Data a definir';
+                if (jogo.data && jogo.data !== '-') {
+                    const d = new Date(jogo.data);
+                    if (!isNaN(d)) {
+                        dataFormatada = d.toLocaleDateString('pt-BR') + ' - ' + d.toLocaleTimeString('pt-BR', {hour: '2-digit', minute:'2-digit'});
+                    }
+                }
+
+                card.innerHTML = `
+                    <div style="font-size: 13px; color: #555;">📅 ${dataFormatada} | 🏟️ ${jogo.estadio || 'A definir'}</div>
+                    <div class="confronto">
+                        <span style="flex: 1; text-align: right; padding-right: 15px;"><b>${jogo.time_casa}</b></span>
+                        <input type="number" class="input-gols" id="casa-${jogo.id}" min="0" value="${jogo.palpite_casa !== undefined ? jogo.palpite_casa : ''}">
+                        <span style="padding: 0 10px;">X</span>
+                        <input type="number" class="input-gols" id="fora-${jogo.id}" min="0" value="${jogo.palpite_fora !== undefined ? jogo.palpite_fora : ''}">
+                        <span style="flex: 1; text-align: left; padding-left: 15px;"><b>${jogo.time_fora}</b></span>
+                    </div>
+                    <button class="btn-salvar" onclick="salvarPalpite(${jogo.id})">Salvar Palpite</button>
+                `;
+                container.appendChild(card);
+            });
+
+            // Atualiza o contador de quantos jogos já estão na tela
+            jogosExibidosContador = fimDoLimite;
+
+            // Se ainda houverem jogos escondidos, mostra o botão "Carregar Mais", senão esconde ele
+            const btnCarregar = document.getElementById('btn-carregar-mais');
+            if (jogosExibidosContador < todosOsJogosFuturos.length) {
+                btnCarregar.style.display = 'block';
+            } else {
+                btnCarregar.style.display = 'none';
+            }
+        }
+
+        function salvarPalpite(jogoId) {
+            const golsCasa = document.getElementById(`casa-${jogoId}`).value;
+            const golsFora = document.getElementById(`fora-${jogoId}`).value;
+
+            if (golsCasa === '' || golsFora === '') {
+                alert('Por favor, preencha ambos os placares antes de salvar!');
+                return;
+            }
+
+            // Envia o palpite para a API do seu Flask salvar no servidor
+            fetch('/api/salvar_palpite', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    jogo_id: jogoId,
+                    gols_casa: parseInt(golsCasa),
+                    gols_fora: parseInt(golsFora)
+                })
+            })
+            .then(res => res.json())
+            .then(dados => {
+                if(dados.sucesso) {
+                    alert('Palpite salvo com sucesso!');
+                } else {
+                    alert('Erro ao salvar palpite: ' + dados.mensagem);
+                }
+            })
+            .catch(err => alert('Erro de conexão ao salvar palpite.'));
+        }
+
+        window.onload = carregarPalpites;
+    </script>
 </body>
-
 
 </html>

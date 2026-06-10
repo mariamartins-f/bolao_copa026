@@ -11,26 +11,76 @@
 
 <body>
     <div class="wrapper">
-        <form action="">
+        <form id="form-login">
             <h1>Login</h1>
+            
             <div class="input-box">
-                <input type="text" placeholder="Usuário" required>
+                <input type="text" id="usuario" placeholder="Usuário" required>
                 <i class="fa-regular fa-user"></i>
             </div>
+            
             <div class="input-box">
-                <input type="text" placeholder="Senha" required>
+                <input type="password" id="senha" placeholder="Senha" required>
                 <i class="fa-solid fa-key"></i>
             </div>
+            
             <div class="remember-forgot">
                 <label><input type="checkbox">Lembrar desse dispositivo</label>
                 <a href="#">Esqueci minha senha</a>
             </div>
+            
             <button type="submit" class="btn">Login</button>
+            
+            <div id="mensagem-erro" style="color: #ff4a4a; text-align: center; margin-top: 15px; font-weight: 600; display: none;"></div>
+
             <div class="register-link">
                 <p>Não tem uma conta? <a href="#">Registrar</a></p>
             </div>
         </form>
     </div>
+
+    <script>
+        document.getElementById('form-login').addEventListener('submit', function(event) {
+            // Evita que a página recarregue ao submeter o formulário
+            event.preventDefault();
+
+            // Captura os valores digitados pelos participantes
+            const usuarioInput = document.getElementById('usuario').value;
+            const senhaInput = document.getElementById('senha').value;
+            const erroDiv = document.getElementById('mensagem-erro');
+
+            // Oculta mensagem de erro anterior
+            erroDiv.style.display = 'none';
+
+            // Faz o fetch do tipo POST enviando os campos estruturados em JSON
+            fetch('/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    usuario: usuarioInput,
+                    senha: senhaInput
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.sucesso) {
+                    // Se a validação no Flask der sucesso, redireciona para a página inicial dos jogos
+                    window.location.href = '/Inicio/inicio.html';
+                } else {
+                    // Exibe a mensagem de erro vinda do back-end
+                    erroDiv.textContent = '❌ ' + (data.mensagem || 'Erro ao realizar login.');
+                    erroDiv.style.display = 'block';
+                }
+            })
+            .catch(error => {
+                console.error('Erro na requisição:', error);
+                erroDiv.textContent = '❌ Erro de comunicação com o servidor.';
+                erroDiv.style.display = 'block';
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -19,6 +19,7 @@
             <li><a href="/classificação/classificacao.html">Classificação</a></li>
             <li><a href="/historico.html">Histórico</a></li>
             <li><a href="/participantes.html">Participantes</a></li>
+            <li><a href="/meus_palpites.html">Meus Palpites</a></li>
         </ul>
         <ul>
             <li><a href="/login.html">Login</a></li>
@@ -76,6 +77,27 @@
                     document.getElementById('loading').style.display = 'none';
                     document.getElementById('error').style.display = 'block';
                     document.getElementById('error').innerHTML = '❌ Erro: execute o Python primeiro para gerar o arquivo jogos.json';
+                });
+            // Dentro do seu fetch que lê os jogos para montar a tabela inicial:
+            fetch('/Inicio/jogos.json')
+                .then(res => res.json())
+                .then(jogos => {
+                    const elementoTabela = document.getElementById('corpo-tabela-jogos');
+                    elementoTabela.innerHTML = "";
+
+                    jogos.forEach(jogo => {
+                        // REGRA NOVA: Filtra e oculta os confrontos indefinidos ("A definir")
+                        if (jogo.time_casa.includes("A definir") || jogo.time_fora.includes("A definir")) {
+                            return;
+                        }
+
+                        elementoTabela.innerHTML += `
+                <tr>
+                    <td>${jogo.dia} às ${jogo.hora}</td>
+                    <td>${jogo.time_casa} ${jogo.gols_casa} x ${jogo.gols_fora} ${jogo.time_fora}</td>
+                </tr>
+            `;
+                    });
                 });
         }
 

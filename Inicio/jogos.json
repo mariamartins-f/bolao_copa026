@@ -2,833 +2,793 @@
   {
     "dia": "11/06/2026",
     "hora": "16:00",
+    "data_iso": "2026-06-11T16:00:00",
     "time_casa": "México",
+    "time_fora": "África do Sul",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "África do Sul"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "11/06/2026",
     "hora": "23:00",
+    "data_iso": "2026-06-11T23:00:00",
     "time_casa": "Coreia do Sul",
+    "time_fora": "Czechia",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": null
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "12/06/2026",
     "hora": "16:00",
+    "data_iso": "2026-06-12T16:00:00",
     "time_casa": "Canadá",
+    "time_fora": "Bósnia",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": null
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "12/06/2026",
     "hora": "22:00",
+    "data_iso": "2026-06-12T22:00:00",
     "time_casa": "Estados Unidos",
+    "time_fora": "Paraguai",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Paraguai"
-  },
-  {
-    "dia": "13/06/2026",
-    "hora": "01:00",
-    "time_casa": "Austrália",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "13/06/2026",
     "hora": "16:00",
+    "data_iso": "2026-06-13T16:00:00",
     "time_casa": "Catar",
+    "time_fora": "Suíça",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Suíça"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "13/06/2026",
     "hora": "19:00",
+    "data_iso": "2026-06-13T19:00:00",
     "time_casa": "Brasil",
+    "time_fora": "Marrocos",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Marrocos"
+    "status": "TIMED",
+    "tipo": "brasil"
   },
   {
     "dia": "13/06/2026",
     "hora": "22:00",
+    "data_iso": "2026-06-13T22:00:00",
     "time_casa": "Haiti",
+    "time_fora": "Escócia",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Escócia"
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "14/06/2026",
+    "hora": "01:00",
+    "data_iso": "2026-06-14T01:00:00",
+    "time_casa": "Austrália",
+    "time_fora": "Turquia",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "14/06/2026",
     "hora": "14:00",
+    "data_iso": "2026-06-14T14:00:00",
     "time_casa": "Alemanha",
+    "time_fora": "Curaçau",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Curaçau"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "14/06/2026",
     "hora": "17:00",
+    "data_iso": "2026-06-14T17:00:00",
     "time_casa": "Países Baixos",
+    "time_fora": "Japão",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Japão"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "14/06/2026",
     "hora": "20:00",
+    "data_iso": "2026-06-14T20:00:00",
     "time_casa": "Costa do Marfim",
+    "time_fora": "Equador",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Equador"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "14/06/2026",
     "hora": "23:00",
-    "time_casa": null,
+    "data_iso": "2026-06-14T23:00:00",
+    "time_casa": "Suécia",
+    "time_fora": "Tunísia",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Tunísia"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "15/06/2026",
     "hora": "13:00",
+    "data_iso": "2026-06-15T13:00:00",
     "time_casa": "Espanha",
+    "time_fora": "Cabo Verde",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Cabo Verde"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "15/06/2026",
     "hora": "16:00",
+    "data_iso": "2026-06-15T16:00:00",
     "time_casa": "Bélgica",
+    "time_fora": "Egito",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Egito"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "15/06/2026",
     "hora": "19:00",
+    "data_iso": "2026-06-15T19:00:00",
     "time_casa": "Arábia Saudita",
+    "time_fora": "Uruguai",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Uruguai"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "15/06/2026",
     "hora": "22:00",
+    "data_iso": "2026-06-15T22:00:00",
     "time_casa": "República Islâmica do Irã",
+    "time_fora": "Nova Zelândia",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Nova Zelândia"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "16/06/2026",
     "hora": "16:00",
+    "data_iso": "2026-06-16T16:00:00",
     "time_casa": "França",
+    "time_fora": "Senegal",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Senegal"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "16/06/2026",
-    "hora": "21:00",
-    "time_casa": null,
+    "hora": "19:00",
+    "data_iso": "2026-06-16T19:00:00",
+    "time_casa": "Iraque",
+    "time_fora": "Noruega",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Noruega"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "16/06/2026",
     "hora": "22:00",
+    "data_iso": "2026-06-16T22:00:00",
     "time_casa": "Argentina",
+    "time_fora": "Argélia",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Argélia"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "17/06/2026",
     "hora": "01:00",
+    "data_iso": "2026-06-17T01:00:00",
     "time_casa": "Áustria",
+    "time_fora": "Jordânia",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Jordânia"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "17/06/2026",
     "hora": "14:00",
+    "data_iso": "2026-06-17T14:00:00",
     "time_casa": "Portugal",
+    "time_fora": "Congo DR",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": null
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "17/06/2026",
-    "hora": "16:00",
+    "hora": "17:00",
+    "data_iso": "2026-06-17T17:00:00",
     "time_casa": "Inglaterra",
+    "time_fora": "Croácia",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Croácia"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "17/06/2026",
     "hora": "20:00",
+    "data_iso": "2026-06-17T20:00:00",
     "time_casa": "Gana",
+    "time_fora": "Panamá",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Panamá"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "17/06/2026",
     "hora": "23:00",
+    "data_iso": "2026-06-17T23:00:00",
     "time_casa": "Uzbequistão",
+    "time_fora": "Colômbia",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Colômbia"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "18/06/2026",
     "hora": "13:00",
-    "time_casa": null,
+    "data_iso": "2026-06-18T13:00:00",
+    "time_casa": "Czechia",
+    "time_fora": "África do Sul",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "África do Sul"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "18/06/2026",
     "hora": "16:00",
+    "data_iso": "2026-06-18T16:00:00",
     "time_casa": "Suíça",
+    "time_fora": "Bósnia",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": null
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "18/06/2026",
     "hora": "19:00",
+    "data_iso": "2026-06-18T19:00:00",
     "time_casa": "Canadá",
+    "time_fora": "Catar",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Catar"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "18/06/2026",
-    "hora": "23:00",
+    "hora": "22:00",
+    "data_iso": "2026-06-18T22:00:00",
     "time_casa": "México",
+    "time_fora": "Coreia do Sul",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Coreia do Sul"
-  },
-  {
-    "dia": "19/06/2026",
-    "hora": "01:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Paraguai"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "19/06/2026",
     "hora": "16:00",
+    "data_iso": "2026-06-19T16:00:00",
     "time_casa": "Estados Unidos",
+    "time_fora": "Austrália",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Austrália"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "19/06/2026",
     "hora": "19:00",
+    "data_iso": "2026-06-19T19:00:00",
     "time_casa": "Escócia",
+    "time_fora": "Marrocos",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Marrocos"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "19/06/2026",
-    "hora": "22:00",
+    "hora": "21:30",
+    "data_iso": "2026-06-19T21:30:00",
     "time_casa": "Brasil",
+    "time_fora": "Haiti",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Haiti"
+    "status": "TIMED",
+    "tipo": "brasil"
   },
   {
     "dia": "20/06/2026",
-    "hora": "01:00",
-    "time_casa": "Tunísia",
+    "hora": "00:00",
+    "data_iso": "2026-06-20T00:00:00",
+    "time_casa": "Turquia",
+    "time_fora": "Paraguai",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Japão"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "20/06/2026",
     "hora": "14:00",
+    "data_iso": "2026-06-20T14:00:00",
     "time_casa": "Países Baixos",
+    "time_fora": "Suécia",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": null
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "20/06/2026",
     "hora": "17:00",
+    "data_iso": "2026-06-20T17:00:00",
     "time_casa": "Alemanha",
+    "time_fora": "Costa do Marfim",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Costa do Marfim"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "20/06/2026",
     "hora": "21:00",
+    "data_iso": "2026-06-20T21:00:00",
     "time_casa": "Equador",
+    "time_fora": "Curaçau",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Curaçau"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
     "dia": "21/06/2026",
-    "hora": "13:00",
-    "time_casa": "Espanha",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Arábia Saudita"
-  },
-  {
-    "dia": "21/06/2026",
-    "hora": "16:00",
-    "time_casa": "Bélgica",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "República Islâmica do Irã"
-  },
-  {
-    "dia": "21/06/2026",
-    "hora": "19:00",
-    "time_casa": "Uruguai",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Cabo Verde"
-  },
-  {
-    "dia": "21/06/2026",
-    "hora": "22:00",
-    "time_casa": "Nova Zelândia",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Egito"
-  },
-  {
-    "dia": "22/06/2026",
-    "hora": "14:00",
-    "time_casa": "Argentina",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Áustria"
-  },
-  {
-    "dia": "22/06/2026",
-    "hora": "18:00",
-    "time_casa": "França",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "22/06/2026",
-    "hora": "21:00",
-    "time_casa": "Noruega",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Senegal"
-  },
-  {
-    "dia": "22/06/2026",
-    "hora": "22:00",
-    "time_casa": "Jordânia",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Argélia"
-  },
-  {
-    "dia": "23/06/2026",
-    "hora": "14:00",
-    "time_casa": "Portugal",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Uzbequistão"
-  },
-  {
-    "dia": "23/06/2026",
-    "hora": "17:00",
-    "time_casa": "Inglaterra",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Gana"
-  },
-  {
-    "dia": "23/06/2026",
-    "hora": "20:00",
-    "time_casa": "Panamá",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Croácia"
-  },
-  {
-    "dia": "23/06/2026",
-    "hora": "23:00",
-    "time_casa": "Colômbia",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "24/06/2026",
-    "hora": "16:00",
-    "time_casa": "Suíça",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Canadá"
-  },
-  {
-    "dia": "24/06/2026",
-    "hora": "16:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Catar"
-  },
-  {
-    "dia": "24/06/2026",
-    "hora": "19:00",
-    "time_casa": "Marrocos",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Haiti"
-  },
-  {
-    "dia": "24/06/2026",
-    "hora": "19:00",
-    "time_casa": "Escócia",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Brasil"
-  },
-  {
-    "dia": "24/06/2026",
-    "hora": "22:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "México"
-  },
-  {
-    "dia": "24/06/2026",
-    "hora": "22:00",
-    "time_casa": "África do Sul",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Coreia do Sul"
-  },
-  {
-    "dia": "25/06/2026",
-    "hora": "17:00",
-    "time_casa": "Equador",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Alemanha"
-  },
-  {
-    "dia": "25/06/2026",
-    "hora": "17:00",
-    "time_casa": "Curaçau",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Costa do Marfim"
-  },
-  {
-    "dia": "25/06/2026",
-    "hora": "20:00",
+    "hora": "01:00",
+    "data_iso": "2026-06-21T01:00:00",
     "time_casa": "Tunísia",
+    "time_fora": "Japão",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": "Países Baixos"
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
-    "dia": "25/06/2026",
-    "hora": "20:00",
-    "time_casa": "Japão",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "25/06/2026",
-    "hora": "23:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Estados Unidos"
-  },
-  {
-    "dia": "25/06/2026",
-    "hora": "23:00",
-    "time_casa": "Paraguai",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Austrália"
-  },
-  {
-    "dia": "26/06/2026",
-    "hora": "16:00",
-    "time_casa": "Noruega",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "França"
-  },
-  {
-    "dia": "26/06/2026",
-    "hora": "16:00",
-    "time_casa": "Senegal",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "26/06/2026",
-    "hora": "21:00",
-    "time_casa": "Uruguai",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Espanha"
-  },
-  {
-    "dia": "26/06/2026",
-    "hora": "21:00",
-    "time_casa": "Cabo Verde",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Arábia Saudita"
-  },
-  {
-    "dia": "27/06/2026",
-    "hora": "00:00",
-    "time_casa": "Nova Zelândia",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Bélgica"
-  },
-  {
-    "dia": "27/06/2026",
-    "hora": "00:00",
-    "time_casa": "Egito",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "República Islâmica do Irã"
-  },
-  {
-    "dia": "27/06/2026",
-    "hora": "18:00",
-    "time_casa": "Panamá",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Inglaterra"
-  },
-  {
-    "dia": "27/06/2026",
-    "hora": "18:00",
-    "time_casa": "Croácia",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Gana"
-  },
-  {
-    "dia": "27/06/2026",
-    "hora": "20:30",
-    "time_casa": "Colômbia",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Portugal"
-  },
-  {
-    "dia": "27/06/2026",
-    "hora": "20:30",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Uzbequistão"
-  },
-  {
-    "dia": "27/06/2026",
-    "hora": "23:00",
-    "time_casa": "Jordânia",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Argentina"
-  },
-  {
-    "dia": "27/06/2026",
-    "hora": "23:00",
-    "time_casa": "Argélia",
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": "Áustria"
-  },
-  {
-    "dia": "28/06/2026",
-    "hora": "16:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "29/06/2026",
-    "hora": "14:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "29/06/2026",
-    "hora": "17:30",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "29/06/2026",
-    "hora": "22:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "30/06/2026",
-    "hora": "14:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "30/06/2026",
-    "hora": "18:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "30/06/2026",
-    "hora": "22:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "01/07/2026",
+    "dia": "21/06/2026",
     "hora": "13:00",
-    "time_casa": null,
+    "data_iso": "2026-06-21T13:00:00",
+    "time_casa": "Espanha",
+    "time_fora": "Arábia Saudita",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": null
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
-    "dia": "01/07/2026",
-    "hora": "17:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "01/07/2026",
-    "hora": "21:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "02/07/2026",
+    "dia": "21/06/2026",
     "hora": "16:00",
-    "time_casa": null,
+    "data_iso": "2026-06-21T16:00:00",
+    "time_casa": "Bélgica",
+    "time_fora": "República Islâmica do Irã",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": null
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
-    "dia": "02/07/2026",
-    "hora": "20:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "03/07/2026",
-    "hora": "00:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "03/07/2026",
-    "hora": "15:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "03/07/2026",
+    "dia": "21/06/2026",
     "hora": "19:00",
-    "time_casa": null,
+    "data_iso": "2026-06-21T19:00:00",
+    "time_casa": "Uruguai",
+    "time_fora": "Cabo Verde",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": null
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
-    "dia": "03/07/2026",
-    "hora": "22:30",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "04/07/2026",
-    "hora": "14:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "04/07/2026",
-    "hora": "18:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "05/07/2026",
-    "hora": "17:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "05/07/2026",
-    "hora": "21:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "06/07/2026",
-    "hora": "16:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "06/07/2026",
-    "hora": "21:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "07/07/2026",
-    "hora": "13:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "07/07/2026",
-    "hora": "17:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "09/07/2026",
-    "hora": "17:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "10/07/2026",
-    "hora": "16:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "11/07/2026",
-    "hora": "18:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "11/07/2026",
+    "dia": "21/06/2026",
     "hora": "22:00",
-    "time_casa": null,
+    "data_iso": "2026-06-21T22:00:00",
+    "time_casa": "Nova Zelândia",
+    "time_fora": "Egito",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": null
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
-    "dia": "14/07/2026",
-    "hora": "16:00",
-    "time_casa": null,
+    "dia": "22/06/2026",
+    "hora": "14:00",
+    "data_iso": "2026-06-22T14:00:00",
+    "time_casa": "Argentina",
+    "time_fora": "Áustria",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": null
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
-    "dia": "15/07/2026",
-    "hora": "16:00",
-    "time_casa": null,
-    "gols_casa": "-",
-    "gols_fora": "-",
-    "time_fora": null
-  },
-  {
-    "dia": "18/07/2026",
+    "dia": "22/06/2026",
     "hora": "18:00",
-    "time_casa": null,
+    "data_iso": "2026-06-22T18:00:00",
+    "time_casa": "França",
+    "time_fora": "Iraque",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": null
+    "status": "TIMED",
+    "tipo": "geral"
   },
   {
-    "dia": "19/07/2026",
-    "hora": "16:00",
-    "time_casa": null,
+    "dia": "22/06/2026",
+    "hora": "21:00",
+    "data_iso": "2026-06-22T21:00:00",
+    "time_casa": "Noruega",
+    "time_fora": "Senegal",
     "gols_casa": "-",
     "gols_fora": "-",
-    "time_fora": null
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "23/06/2026",
+    "hora": "00:00",
+    "data_iso": "2026-06-23T00:00:00",
+    "time_casa": "Jordânia",
+    "time_fora": "Argélia",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "23/06/2026",
+    "hora": "14:00",
+    "data_iso": "2026-06-23T14:00:00",
+    "time_casa": "Portugal",
+    "time_fora": "Uzbequistão",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "23/06/2026",
+    "hora": "17:00",
+    "data_iso": "2026-06-23T17:00:00",
+    "time_casa": "Inglaterra",
+    "time_fora": "Gana",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "23/06/2026",
+    "hora": "20:00",
+    "data_iso": "2026-06-23T20:00:00",
+    "time_casa": "Panamá",
+    "time_fora": "Croácia",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "23/06/2026",
+    "hora": "23:00",
+    "data_iso": "2026-06-23T23:00:00",
+    "time_casa": "Colômbia",
+    "time_fora": "Congo DR",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "24/06/2026",
+    "hora": "16:00",
+    "data_iso": "2026-06-24T16:00:00",
+    "time_casa": "Suíça",
+    "time_fora": "Canadá",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "24/06/2026",
+    "hora": "16:00",
+    "data_iso": "2026-06-24T16:00:00",
+    "time_casa": "Bósnia",
+    "time_fora": "Catar",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "24/06/2026",
+    "hora": "19:00",
+    "data_iso": "2026-06-24T19:00:00",
+    "time_casa": "Marrocos",
+    "time_fora": "Haiti",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "24/06/2026",
+    "hora": "19:00",
+    "data_iso": "2026-06-24T19:00:00",
+    "time_casa": "Escócia",
+    "time_fora": "Brasil",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "brasil"
+  },
+  {
+    "dia": "24/06/2026",
+    "hora": "22:00",
+    "data_iso": "2026-06-24T22:00:00",
+    "time_casa": "Czechia",
+    "time_fora": "México",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "24/06/2026",
+    "hora": "22:00",
+    "data_iso": "2026-06-24T22:00:00",
+    "time_casa": "África do Sul",
+    "time_fora": "Coreia do Sul",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "25/06/2026",
+    "hora": "17:00",
+    "data_iso": "2026-06-25T17:00:00",
+    "time_casa": "Equador",
+    "time_fora": "Alemanha",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "25/06/2026",
+    "hora": "17:00",
+    "data_iso": "2026-06-25T17:00:00",
+    "time_casa": "Curaçau",
+    "time_fora": "Costa do Marfim",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "25/06/2026",
+    "hora": "20:00",
+    "data_iso": "2026-06-25T20:00:00",
+    "time_casa": "Tunísia",
+    "time_fora": "Países Baixos",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "25/06/2026",
+    "hora": "20:00",
+    "data_iso": "2026-06-25T20:00:00",
+    "time_casa": "Japão",
+    "time_fora": "Suécia",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "25/06/2026",
+    "hora": "23:00",
+    "data_iso": "2026-06-25T23:00:00",
+    "time_casa": "Turquia",
+    "time_fora": "Estados Unidos",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "25/06/2026",
+    "hora": "23:00",
+    "data_iso": "2026-06-25T23:00:00",
+    "time_casa": "Paraguai",
+    "time_fora": "Austrália",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "26/06/2026",
+    "hora": "16:00",
+    "data_iso": "2026-06-26T16:00:00",
+    "time_casa": "Noruega",
+    "time_fora": "França",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "26/06/2026",
+    "hora": "16:00",
+    "data_iso": "2026-06-26T16:00:00",
+    "time_casa": "Senegal",
+    "time_fora": "Iraque",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "26/06/2026",
+    "hora": "21:00",
+    "data_iso": "2026-06-26T21:00:00",
+    "time_casa": "Uruguai",
+    "time_fora": "Espanha",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "26/06/2026",
+    "hora": "21:00",
+    "data_iso": "2026-06-26T21:00:00",
+    "time_casa": "Cabo Verde",
+    "time_fora": "Arábia Saudita",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "27/06/2026",
+    "hora": "00:00",
+    "data_iso": "2026-06-27T00:00:00",
+    "time_casa": "Nova Zelândia",
+    "time_fora": "Bélgica",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "27/06/2026",
+    "hora": "00:00",
+    "data_iso": "2026-06-27T00:00:00",
+    "time_casa": "Egito",
+    "time_fora": "República Islâmica do Irã",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "27/06/2026",
+    "hora": "18:00",
+    "data_iso": "2026-06-27T18:00:00",
+    "time_casa": "Panamá",
+    "time_fora": "Inglaterra",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "27/06/2026",
+    "hora": "18:00",
+    "data_iso": "2026-06-27T18:00:00",
+    "time_casa": "Croácia",
+    "time_fora": "Gana",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "27/06/2026",
+    "hora": "20:30",
+    "data_iso": "2026-06-27T20:30:00",
+    "time_casa": "Colômbia",
+    "time_fora": "Portugal",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "27/06/2026",
+    "hora": "20:30",
+    "data_iso": "2026-06-27T20:30:00",
+    "time_casa": "Congo DR",
+    "time_fora": "Uzbequistão",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "27/06/2026",
+    "hora": "23:00",
+    "data_iso": "2026-06-27T23:00:00",
+    "time_casa": "Jordânia",
+    "time_fora": "Argentina",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
+  },
+  {
+    "dia": "27/06/2026",
+    "hora": "23:00",
+    "data_iso": "2026-06-27T23:00:00",
+    "time_casa": "Argélia",
+    "time_fora": "Áustria",
+    "gols_casa": "-",
+    "gols_fora": "-",
+    "status": "TIMED",
+    "tipo": "geral"
   }
 ]

@@ -38,6 +38,8 @@
             <li><a href="/classificação/classificacao.html">Classificação</a></li>
             <li><a href="/historico.html">Histórico</a></li>
             <li><a href="/participantes.html">Participantes</a></li>
+            <li><a href="/meus_palpites.html">Meus Palpites</a></li>
+
         </ul>
     </nav>
     <div class="container"
@@ -55,16 +57,22 @@
 
     <script>
         function carregarClassificacao() {
-            fetch('classificacao.json')
-                .then(res => res.json())
-                .then(classificacao => {
+            // Mudamos o fetch para puxar os dados atualizados em tempo real pela rota do Flask
+            fetch('/api/grupos_copa')
+                .then(res => {
+                    if (!res.ok) throw new Error("Erro na resposta do servidor.");
+                    return res.json();
+                })
+                .then(dadosGrupos => {
                     document.getElementById('loading').style.display = 'none';
-                    document.getElementById('tables').style.display = 'block';
-
+                    
+                    // CORREÇÃO: Garante o display flex padrão do seu layout para alinhar os grupos lado a lado
                     const tablesDiv = document.getElementById('tables');
+                    tablesDiv.style.display = 'flex'; 
                     tablesDiv.innerHTML = '';
 
-                    classificacao.forEach(grupo => {
+                    // Percorre o objeto dinâmico chave-valor vindo do back-end (Ex: "Grupo A", "Grupo B")
+                    Object.entries(dadosGrupos).forEach(([nomeGrupo, times]) => {
                         const groupDiv = document.createElement('div');
                         groupDiv.style.width = '300px';
                         groupDiv.style.display = 'flex';
@@ -72,13 +80,14 @@
                         groupDiv.style.alignItems = 'center';
 
                         const groupTitle = document.createElement('h3');
-                        groupTitle.textContent = grupo.grupo;
+                        groupTitle.textContent = nomeGrupo;
                         groupDiv.appendChild(groupTitle);
 
                         const table = document.createElement('table');
                         table.style.borderCollapse = 'collapse';
                         table.style.width = '100%';
                         table.style.maxWidth = '300px';
+                        
                         const thead = document.createElement('thead');
                         thead.innerHTML = `
                             <tr>
@@ -90,12 +99,12 @@
                         table.appendChild(thead);
 
                         const tbody = document.createElement('tbody');
-                        grupo.times.forEach(time => {
+                        times.forEach(time => {
                             const row = document.createElement('tr');
                             row.innerHTML = `
-                                <td style="border: 1px solid #ddd; padding: 8px;">${time.position}</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">${time.position}º</td>
                                 <td style="border: 1px solid #ddd; padding: 8px;">${time.team || 'A definir'}</td>
-                                <td style="border: 1px solid #ddd; padding: 8px;">${time.points}</td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><strong>${time.points}</strong></td>
                             `;
                             tbody.appendChild(row);
                         });
@@ -109,6 +118,8 @@
                     document.getElementById('loading').style.display = 'none';
                     const errorDiv = document.getElementById('error');
                     errorDiv.style.display = 'block';
+                    errorDiv.style.color = 'red';
+                    errorDiv.style.fontWeight = 'bold';
                     errorDiv.textContent = 'Erro ao carregar a classificação: ' + err.message;
                 });
         }

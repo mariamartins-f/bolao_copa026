@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Palpites</title>
+    <link rel="stylesheet" href="/Inicio/inicio.css">
+    <style>
+        .filtro-container { margin: 20px 0; text-align: center; }
+        .filtro-container select { padding: 10px; font-size: 16px; border-radius: 5px; }
+        .jogo-linha { display: flex; align-items: center; justify-content: center; margin: 15px 0; font-size: 18px; }
+        .jogo-linha input { width: 50px; text-align: center; margin: 0 10px; padding: 5px; font-size: 16px; }
+        .btn-salvar { display: block; margin: 30px auto; padding: 12px 30px; font-size: 18px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        .bloqueado { opacity: 0.6; pointer-events: none; background-color: #f1f1f1; }
+    </style>
+</head>
+<body>
+    <header><h1>Bolão Copa do Mundo 2026</h1></header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/Inicio/inicio.html">Início</a></li>
+            <li><a href="/classificação/classificacao.html">Classificação</a></li>
+            <li><a href="/participantes.html">Participantes</a></li>
+            <li><a href="/palpites.html">Meus Palpites</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Preencher Meus Palpites</h2>
+        
+        <div class="filtro-container">
+            <label for="tipo-bolao"><b>Escolha sua Modalidade: </b></label>
+            <select id="tipo-bolao" onchange="carregarFormularioPalpites()">
+                <option value="geral">Bolão Geral (Todos os Jogos)</option>
+                <option value="brasil">Apenas Jogos do Brasil</option>
+            </select>
+        </div>
+
+        <form id="form-palpites">
+            <div id="lista-jogos-palpites">
+                </div>
+            <button type="submit" class="btn-salvar">Salvar Palpites</button>
+        </form>
+    </div>
+
+    <script>
+        let palpitesSalvosAnteriormente = {};
+
+        // Busca o que o usuário já tinha salvo para não apagar o que ele já fez
+        function buscarPalpitesExistentes() {
+            return fetch('/api/meus_palpites_salvos')
+                .then(res => res.json())
+                .then(dados => { palpitesSalvosAnteriormente = dados; });
+        }
+
+        function carregarFormularioPalpites() {
+            const tipo = document.getElementById('tipo-bolao').value;
+            const container = document.getElementById('lista-jogos-palpites');
+            container.innerHTML = "<p style='text-align:center;'>Carregando jogos...</p>";
+
+            fetch(`/api/jogos_por_escolha?tipo=${tipo}`)
+                .then(res => res.json())
+                .then(jogos => {
+                    container.innerHTML = "";
+                    if(jogos.length === 0) {
+                        container.innerHTML = "<p style='text-align:center;'>Nenhum jogo disponível para esta categoria.</p>";
+                        return;
+                    }
+
+                    jogos.forEach(jogo => {
+                        // Verifica se já tem palpite guardado para esse ID de jogo
+                        const palpiteSalvo = palpitesSalvosAnteriormente[jogo.id_jogo] || { casa: '', fora: '' };
+                        
+                        const divJogo = document.createElement('div');
+                        divJogo.className = `jogo-linha ${jogo.bloqueado ? 'bloqueado' : ''}`;
+                        
+                        divJogo.innerHTML = `
+                            <div style="width: 30%; text-align: right;">${jogo.time_casa}</div>
+                            <input type="number" min="0" data-jogo="${jogo.id_jogo}" data-time="casa" value="${palpiteSalvo.casa}" ${jogo.bloqueado ? 'disabled' : ''} required>
+                            <span>x</span>
+                            <input type="number" min="0" data-jogo="${jogo.id_jogo}" data-time="fora" value="${palpiteSalvo.fora}" ${jogo.bloqueado ? 'disabled' : ''} required>
+                            <div style="width: 30%; text-align: left;">${jogo.time_fora}</div>
+                            <small style="margin-left:15px; color:#777;">(${jogo.dia} ${jogo.hora}) ${jogo.bloqueado ? '🔒' : ''}</small>
+                        `;
+                        container.appendChild(divJogo);
+                    });
+                });
+        }
+
+        document.getElementById('form-palpites').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const inputs = document.querySelectorAll('#lista-jogos-palpites input');
+            const corpoPalpites = {};
+
+            inputs.forEach(input => {
+                if(input.disabled) return; // Não envia jogos bloqueados
+                const idJogo = input.getAttribute('data-jogo');
+                const time = input.getAttribute('data-time');
+                
+                if(!corpoPalpites[idJogo]) corpoPalpites[idJogo] = {};
+                corpoPalpites[idJogo][time] = input.value;
+            });
+
+            fetch('/api/palpites', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(corpoPalpites)
+            })
+            .then(res => res.json())
+            .then(data => {
+                alert("Palpites processados com sucesso!");
+                buscarPalpitesExistentes().then(() => carregarFormularioPalpites());
+            });
+        });
+
+        // Inicialização
+        document.addEventListener("DOMContentLoaded", function() {
+            buscarPalpitesExistentes().then(() => carregarFormularioPalpites());
+        });
+    </script>
+</body>
+</html>
