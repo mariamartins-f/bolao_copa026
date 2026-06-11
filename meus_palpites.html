@@ -93,15 +93,71 @@
         style="background-color: #1f4f0c; font-family: 'Trebuchet MS', sans-serif; display: flex; gap: 64px; height: 70px; justify-content: center; align-items: center;">
         <h1 style="color: white;">Bolão da Copa do Mundo 2026</h1>
     </header>
-    <nav class="navbar">
-        <ul style="font-family:'Trebuchet MS', sans-serif;">
+    <style>
+        .navbar-custom {
+            background-color: #1f4f0c;
+            font-family: 'Trebuchet MS', sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            flex-wrap: wrap;
+        }
+        .menu-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .menu-links li a {
+            display: block;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .menu-links li a:hover {
+            background-color: #2e7d12;
+            border-radius: 4px;
+        }
+        .btn-logout {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-family: 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+        }
+        .btn-logout:hover {
+            background-color: #c9302c;
+        }
+        @media (max-width: 600px) {
+            .navbar-custom { flex-direction: column; padding: 10px; }
+            .menu-links { justify-content: center; width: 100%; margin-bottom: 10px; }
+            .menu-links li a { padding: 10px 12px; font-size: 14px; }
+        }
+    </style>
+
+    <nav class="navbar-custom">
+        <ul class="menu-links">
             <li><a href="/Inicio/inicio.html">Início</a></li>
             <li><a href="/classificação/classificacao.html">Classificação</a></li>
             <li><a href="/historico.html">Histórico</a></li>
             <li><a href="/participantes.html">Participantes</a></li>
-            <li><a href="/meus_palpites.html">Meus Palpites</a></li>
+            <li><a href="/palpites.html">Meus Palpites</a></li>
         </ul>
+        <button class="btn-logout" id="menu-btn-auth" onclick="gerenciarLogout()">Sair</button>
     </nav>
+
+    <script>
+        function gerenciarLogout() {
+            fetch('/api/logout', { method: 'POST' })
+                .then(() => { window.location.href = '/login.html'; });
+        }
+    </script>
 
     <div class="container"
         style="font-family:'Trebuchet MS', sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px;">
@@ -139,7 +195,7 @@
             document.getElementById('loading').style.display = 'block';
             document.getElementById('lista-jogos').innerHTML = '';
             document.getElementById('btn-carregar-mais').style.display = 'none';
-            
+
             const tipoEscolha = document.getElementById('filtro-tipo').value;
 
             // Faz a chamada para a rota correta do Flask passando o parâmetro de tipo
@@ -147,10 +203,10 @@
                 .then(res => res.json())
                 .then(jogos => {
                     document.getElementById('loading').style.display = 'none';
-                    
+
                     listaJogosFiltrados = jogos;
                     contadorExibidos = 0;
-                    
+
                     exibirMaisDezJogos();
                 });
         }
@@ -158,7 +214,7 @@
         function exibirMaisDezJogos() {
             const container = document.getElementById('lista-jogos');
             const proximoLimite = Math.min(contadorExibidos + PAGINACAO_LIMITE, listaJogosFiltrados.length);
-            
+
             const fatiaDaLista = listaJogosFiltrados.slice(contadorExibidos, proximoLimite);
 
             fatiaDaLista.forEach(jogo => {
@@ -194,7 +250,10 @@
             }
         }
 
-        function salvarPalpiteIndividual(idDoJogo) {
+          function salvarPalpiteIndividual(idDoJogo) {
+            const btn = event.target;
+            if(btn.disabled) return; // Evita cliques duplos simultâneos
+
             const golsCasa = document.getElementById(`casa-${idDoJogo}`).value;
             const golsFora = document.getElementById(`fora-${idDoJogo}`).value;
 
@@ -203,7 +262,11 @@
                 return;
             }
 
-            // Monta o payload no formato esperado pelo backend: { "ID": { "casa": X, "fora": Y } }
+            // Ativa o estado de Loading no botão individual
+            btn.disabled = true;
+            btn.style.backgroundColor = '#666';
+            btn.innerText = '⏳ Salvando...';
+
             const payload = {};
             payload[idDoJogo] = { casa: parseInt(golsCasa), fora: parseInt(golsFora) };
 
@@ -214,12 +277,23 @@
             })
             .then(res => res.json())
             .then(data => {
+                // Restaura o botão após o término seguro do processo
+                btn.disabled = false;
+                btn.style.backgroundColor = '#1f4f0c';
+                btn.innerText = 'Salvar Palpite';
+
                 if (data.sucesso) {
                     alert('Palpite computado com sucesso!');
                     palpitesSalvos[idDoJogo] = { casa: golsCasa, fora: golsFora };
                 } else {
                     alert('Erro: ' + data.erro);
                 }
+            })
+            .catch(() => {
+                btn.disabled = false;
+                btn.style.backgroundColor = '#1f4f0c';
+                btn.innerText = 'Salvar Palpite';
+                alert('Erro de rede ao processar palpite.');
             });
         }
 

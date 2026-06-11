@@ -24,6 +24,37 @@
         ul li a:hover {
             background-color: #1f4f0c;
         }
+        table {
+        width: 100%;
+        border-collapse: separate; /* Permite bordas arredondadas funcionarem */
+        border-spacing: 0;
+        margin-top: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px; /* Arredondamento perfeito da tabela */
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        th, td {
+            text-align: center;
+            padding: 14px 12px; /* Aumento expressivo do padding pedido */
+            border-bottom: 1px solid #ddd;
+            font-size: 15px;
+        }
+
+        th {
+            background-color: #1f4f0c;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Responsividade para telas menores (Celulares) */
+        @media (max-width: 480px) {
+            th, td {
+                padding: 8px 6px;
+                font-size: 13px;
+            }
+        }
     </style>
 </head>
 
@@ -32,16 +63,72 @@
         style="background-color: #1f4f0c; font-family: 'Trebuchet MS', sans-serif; display: flex;gap: 64px;height: 70px;justify-content: center;align-items: center;">
         <h1 style="color: white;">Bolão da Copa do Mundo 2026</h1>
     </header>
-    <nav class="navbar">
-        <ul style="font-family:'Trebuchet MS', sans-serif;">
+    <style>
+        .navbar-custom {
+            background-color: #1f4f0c;
+            font-family: 'Trebuchet MS', sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            flex-wrap: wrap;
+        }
+        .menu-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .menu-links li a {
+            display: block;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .menu-links li a:hover {
+            background-color: #2e7d12;
+            border-radius: 4px;
+        }
+        .btn-logout {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-family: 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+        }
+        .btn-logout:hover {
+            background-color: #c9302c;
+        }
+        @media (max-width: 600px) {
+            .navbar-custom { flex-direction: column; padding: 10px; }
+            .menu-links { justify-content: center; width: 100%; margin-bottom: 10px; }
+            .menu-links li a { padding: 10px 12px; font-size: 14px; }
+        }
+
+    </style>
+
+    <nav class="navbar-custom">
+        <ul class="menu-links">
             <li><a href="/Inicio/inicio.html">Início</a></li>
             <li><a href="/classificação/classificacao.html">Classificação</a></li>
             <li><a href="/historico.html">Histórico</a></li>
             <li><a href="/participantes.html">Participantes</a></li>
-            <li><a href="/meus_palpites.html">Meus Palpites</a></li>
-
+            <li><a href="/palpites.html">Meus Palpites</a></li>
         </ul>
+        <button class="btn-logout" id="menu-btn-auth" onclick="gerenciarLogout()">Sair</button>
     </nav>
+
+    <script>
+        function gerenciarLogout() {
+            fetch('/api/logout', { method: 'POST' })
+                .then(() => { window.location.href = '/login.html'; });
+        }
+    </script>
     <div class="container"
         style="font-family:'Trebuchet MS', sans-serif; display: flex; flex-direction: column; align-items: center;">
         <h2>Tabela de pontos</h2>
@@ -65,10 +152,10 @@
                 })
                 .then(dadosGrupos => {
                     document.getElementById('loading').style.display = 'none';
-                    
+
                     // CORREÇÃO: Garante o display flex padrão do seu layout para alinhar os grupos lado a lado
                     const tablesDiv = document.getElementById('tables');
-                    tablesDiv.style.display = 'flex'; 
+                    tablesDiv.style.display = 'flex';
                     tablesDiv.innerHTML = '';
 
                     // Percorre o objeto dinâmico chave-valor vindo do back-end (Ex: "Grupo A", "Grupo B")
@@ -87,7 +174,7 @@
                         table.style.borderCollapse = 'collapse';
                         table.style.width = '100%';
                         table.style.maxWidth = '300px';
-                        
+
                         const thead = document.createElement('thead');
                         thead.innerHTML = `
                             <tr>

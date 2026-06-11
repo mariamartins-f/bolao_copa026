@@ -1,44 +1,50 @@
 [
   {
     "usuario": "maria",
-    "senha": "maria123",
+    "senha_hash": "228f645851de956b60700d389a9f244199df3da3ff0c62e5200f682859f13885",
     "nome": "Maria Isabel",
     "modalidade": "completo"
   },
   {
     "usuario": "bruno",
-    "senha": "bruno123",
+    "senha_hash": "b2f6ef38fb978d462db1dbb2fa41fb00282662c1d37fcfefd7764d603e91129b",
     "nome": "Bruno",
     "modalidade": "completo"
   },
   {
     "usuario": "rodrigo",
-    "senha": "rodrigo123",
+    "senha_hash": "5be789fcfda7428f731a54776602cf98b1ecf8b5490e0c8b3fbba75498ff0eb3",
     "nome": "Rodrigo",
-    "modalidade": "brasil_apenas"
+    "modalidade": "completo"
   },
   {
     "usuario": "luciana",
-    "senha": "luciana123",
+    "senha_hash": "692c817294025178051772186835a0928e8334465d64be931f6e2f18378546b4",
     "nome": "Luciana",
     "modalidade": "completo"
   },
   {
     "usuario": "claudia",
-    "senha": "claudia123",
+    "senha_hash": "959e1c251f28b76fc1eb7054f066b57917f9e8a5a4176840742d6211758c0c97",
     "nome": "Cláudia",
-    "modalidade": "brasil_apenas"
+    "modalidade": "completo"
   },
   {
     "usuario": "manuela",
-    "senha": "manuela123",
+    "senha_hash": "63a2fa80b271d46797db1386762be71f28e21757a3e2158866dd36d7560da42b",
     "nome": "Manuela",
     "modalidade": "completo"
   },
   {
     "usuario": "daniel",
-    "senha": "daniel123",
+    "senha_hash": "997b6932a9390a82772589578166c4bf9f2b87fcf3008447da0bda4ff0507a21",
     "nome": "Daniel",
+    "modalidade": "completo"
+  },
+  {
+    "usuario": "lais",
+    "senha_hash": "9360814980a37c959775f0a0a56391a1372702be97782ee418be9687e35b7191",
+    "nome": "Lais Garcia",
     "modalidade": "completo"
   }
 ]

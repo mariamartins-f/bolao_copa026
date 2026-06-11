@@ -3,61 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Histórico de Apostas</title>
-    <link rel="stylesheet" href="/Inicio/inicio.css">
+    <title>Histórico de Confrontos - Bolão</title>
+    <style>
+        .card-regras {
+            background-color: #eef7eb;
+            border-left: 5px solid #1f4f0c;
+            padding: 15px;
+            border-radius: 6px;
+            max-width: 800px;
+            width: 100%;
+            margin-bottom: 25px;
+            box-sizing: border-box;
+        }
+        .container-historico {
+            width: 100%;
+            max-width: 900px;
+            overflow-x: auto; /* Permite rolar pro lado no celular se a tabela for grande */
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th { background-color: #1f4f0c; color: white; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>Bolão da Copa do Mundo 2026</h1>
+<body style="margin:0;">
+    <header style="background-color: #1f4f0c; font-family: 'Trebuchet MS'; display: flex; height: 70px; justify-content: center; align-items: center;">
+        <h1 style="color: white; font-size: 24px;">Bolão da Copa do Mundo 2026</h1>
     </header>
-    <nav class="navbar">
-        <ul>
-            <li><a href="/Inicio/inicio.html">Início</a></li>
-            <li><a href="/classificação/classificacao.html">Classificação</a></li>
-            <li><a href="/historico.html">Histórico</a></li>
-            <li><a href="/participantes.html">Participantes</a></li>
-            <li><a href="/meus_palpites.html">Meus Palpites</a></li>
-        </ul>
-    </nav>
+    
+    <div style="font-family: 'Trebuchet MS'; display: flex; flex-direction: column; align-items: center; padding: 20px;">
+        <h2>Histórico de Jogos Realizados</h2>
 
-    <div class="container">
-        <h2>Histórico de Apostas</h2>
-        
-        <label for="select-participante">Filtrar por Participante: </label>
-        <select id="select-participante" style="padding: 5px; margin-bottom: 20px;">
-            <option value="maria">Maria</option>
-            <option value="bruno">Bruno</option>
-            <option value="rodrigo">Rodrigo</option>
-            <option value="daniel">Daniel</option>
-            <option value="luciana">Luciana</option>
-            <option value="claudia">Cláudia</option>
-            <option value="manuela">Manuela</option>
-        </select>
+        <div class="card-regras">
+            <h4 style="margin: 0 0 8px 0; color: #1f4f0c;">📋 Critérios de Pontuação Oficial</h4>
+            <p style="margin: 0; font-size: 14px; color: #444;">
+                🎯 <b>Placar Exato (2 pontos):</b> Se você acertar precisamente os gols de cada seleção.<br>
+                🚀 <b>Acerto de Tendência (1 ponto):</b> Se você acertar qual time ganhou ou se deu empate, mas errou a quantidade exata de gols.
+            </p>
+        </div>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Jogo</th>
-                    <th>Resultado Real</th>
-                    <th>Palpite do Participante</th>
-                    <th>Pontos Ganhos</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>México x África do Sul</td>
-                    <td>2 x 1</td>
-                    <td>2 x 1</td>
-                    <td style="color: green; font-weight: bold;">+2 pts (Placar Exato)</td>
-                </tr>
-                <tr>
-                    <td>Brasil x Marrocos</td>
-                    <td>3 x 0</td>
-                    <td>1 x 0</td>
-                    <td style="color: orange; font-weight: bold;">+1 pt (Acertou Vencedor)</td>
-                </tr>
-            </tbody>
-        </table>
+        <div id="loading">Buscando resultados computados do servidor...</div>
+
+        <div class="container-historico" id="painel-tabela" style="display: none;">
+            <table id="tabela-historico">
+                <thead id="cabecalho-historico"></thead>
+                <tbody id="corpo-historico"></tbody>
+            </table>
+        </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('/api/historico_jogos')
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('loading').style.display = 'none';
+                    if(data.jogos.length === 0) {
+                        document.getElementById('loading').innerText = "Nenhum jogo foi encerrado com placar oficial ainda.";
+                        document.getElementById('loading').style.display = 'block';
+                        return;
+                    }
+                    
+                    document.getElementById('painel-tabela').style.display = 'block';
+                    
+                    const cabecalho = document.getElementById('cabecalho-historico');
+                    const corpo = document.getElementById('corpo-historico');
+                    
+                    // Monta cabeçalho dinâmico baseado nos participantes reais da API
+                    let htmlCabecalho = `<tr><th>Data/Hora</th><th>Resultado Real</th>`;
+                    data.participantes.forEach(p => { htmlCabecalho += `<th>${p}</th>`; });
+                    htmlCabecalho += `</tr>`;
+                    cabecalho.innerHTML = htmlCabecalho;
+                    
+                    // Monta as linhas de jogos realizados
+                    data.jogos.forEach(j => {
+                        let linha = `<tr>
+                            <td style="font-size:12px; color:#555;">${j.data}</td>
+                            <td><b>${j.confronto}</b></td>`;
+                        
+                        data.participantes.forEach(p => {
+                            let palpiteInfo = j.palpites[p] || "Sem aposta (0 pts)";
+                            let destaque = palpiteInfo.includes("2 pts") ? "background-color:#e2f0d9; font-weight:bold;" : "";
+                            linha += `<td style="${destaque}">${palpiteInfo}</td>`;
+                        });
+                        
+                        linha += `</tr>`;
+                        corpo.innerHTML += linha;
+                    });
+                });
+        });
+    </script>
 </body>
 </html>
