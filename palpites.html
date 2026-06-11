@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Palpites - Copa 2026</title>
+    <link rel="stylesheet" href="Inicio/inicio.css">
+    <style>
+        .jogo-card { 
+            border: 1px solid #ccc; 
+            padding: 15px; 
+            margin: 10px 0; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-radius: 8px; 
+            background: #fff;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+        .placar-input { width: 50px; text-align: center; font-size: 18px; margin: 0 10px; }
+        .btn-salvar { background-color: #1f4f0c; color: white; border: none; padding: 8px 15px; cursor: pointer; border-radius: 4px; font-weight: bold; }
+        .btn-salvar:disabled { background-color: #ccc; cursor: not-allowed; }
+        .wrapper { max-width: 1000px; margin: 0 auto; padding: 20px; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Meus Palpites</h2>
+        <p>Olá, <strong id="nome-usuario">Convidado</strong>! Deixe seus palpites até 15 minutos antes de cada partida.</p>
+        <div id="container-jogos">Carregando jogos...</div>
+    </div>
+
+    <script>
+        // Captura o usuário logado
+        const usuario = localStorage.getItem('usuarioLogado') || 'convidado';
+        document.getElementById('nome-usuario').innerText = usuario;
+
+        // Força a busca na porta 5000 onde o Flask está rodando os arquivos
+        fetch('http://127.0.0.1:5000/jogos.json')
+            .then(res => res.json())
+            .then(jogos => {
+                const container = document.getElementById('container-jogos');
+                container.innerHTML = '';
+
+                // Percorre a lista usando o index do array como ID do jogo
+                jogos.forEach((jogo, index) => {
+                    // Pula se os times ainda não estiverem definidos
+                    const timeCasa = jogo.time_casa || 'A definir';
+                    const timeFora = jogo.time_fora || 'A definir';
+                    
+                    // Tratamento da data para validar os 15 minutos (Formato: DD/MM/AAAA às HH:MM)
+                    const partesData = jogo.dia.split('/');
+                    const partesHora = jogo.hora.split(':');
+                    // Cria o objeto de data: ano, mês (0-11), dia, hora, minuto
+                    const dataHoraJogo = new Date(partesData[2], partesData[1] - 1, partesData[0], partesHora[0], partesHora[1]);
+                    
+                    const agora = new Date();
+                    const limiteAposta = new Date(dataHoraJogo.getTime() - 15 * 60 * 1000);
+                    
+                    // Bloqueia caso já tenha passado do limite ou os times não estejam definidos
+                    const estaBloqueado = (agora > limiteAposta || timeCasa === 'A definir' || timeFora === 'A definir') ? 'disabled' : '';
+
+                    const card = document.createElement('div');
+                    card.className = 'jogo-card';
+                    card.innerHTML = `
+                        <div>
+                            <strong>${timeCasa}</strong> VS <strong>${timeFora}</strong>
+                            <br><small>📅 ${jogo.dia} às ${jogo.hora}</small>
+                        </div>
+                        <div>
+                            <input type="number" id="t1-${index}" class="placar-input" min="0" ${estaBloqueado}> x 
+                            <input type="number" id="t2-${index}" class="placar-input" min="0" ${estaBloqueado}>
+                            <button class="btn-salvar" onclick="enviarPalpite('${index}')" ${estaBloqueado}>Salvar</button>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            })
+            .catch(err => {
+                document.getElementById('container-jogos').innerHTML = '❌ Erro ao carregar jogos da API.';
+            });
+
+        function enviarPalpite(idJogo) {
+            const g1 = document.getElementById(`t1-${idJogo}`).value;
+            const g2 = document.getElementById(`t2-${idJogo}`).value;
+
+            if(g1 === '' || g2 === '') return alert('Por favor, preencha o placar completo!');
+
+            fetch('http://127.0.0.1:5000/api/palpite', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ 
+                    usuario: usuario, 
+                    id_jogo: idJogo, 
+                    gols_time1: parseInt(g1), 
+                    gols_time2: parseInt(g2) 
+                })
+            })
+            .then(res => res.json())
+            .then(dado => {
+                alert(dado.mensagem || dado.erro);
+            });
+        }
+    </script>
+</body>
+</html>
