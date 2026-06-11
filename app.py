@@ -67,18 +67,18 @@ def logout():
     return jsonify({"sucesso": True})
 
 # --- LOGIN TOTALMENTE INDEPENDENTE DO GITHUB ---
+# --- LOGIN TOTALMENTE IMUNE A ERROS DE CASING (MAIÚSCULAS/MINÚSCULAS) ---
 @app.route('/api/login', methods=['POST'])
 def login():
     dados = request.json
     usuario_input = dados.get('usuario', '').strip().lower()
     senha_input = dados.get('senha', '')
-    print(f"DEBUG LOGIN -> Usuário enviado: '{usuario_input}'")
-    print(f"DEBUG LOGIN -> Senha enviada (tamanho {len(senha_input)}): '{senha_input}'")
 
-    hash_da_senha = gerar_hash_senha(senha_input)
+    # Gera os dois formatos possíveis de hash para garantir o cruzamento de dados
+    hash_minusculo = gerar_hash_senha(senha_input).lower()
+    hash_maiusculo = gerar_hash_senha(senha_input).upper()
 
-    # BACKUP SEGURO: Usado apenas se o arquivo for apagado por acidente no servidor.
-    # No GitHub público, as senhas originais estão totalmente protegidas em formato Hash.
+    # Seus usuários reservas (Todos como completo por padrão)
     usuarios_fallback = [
         {"usuario": "maria", "senha_hash": "228f645851de956b60700d389a9f244199df3da3ff0c62e5200f682859f13885", "nome": "Maria Isabel", "modalidade": "completo"},
         {"usuario": "bruno", "senha_hash": "b2f6ef38fb978d462db1dbb2fa41fb00282662c1d37fcfefd7764d603e91129b", "nome": "Bruno", "modalidade": "completo"},
@@ -90,21 +90,27 @@ def login():
         {"usuario": "lais", "senha_hash": "9360814980a37c959775f0a0a56391a1372702be97782ee418be9687e35b7191", "nome": "Lais Garcia", "modalidade": "completo"}
     ]
 
-    # Carrega o arquivo existente no servidor (nunca apaga ou força reset automático do arquivo)
     usuarios = carregar_json(USUARIOS_JSON, padrao=usuarios_fallback)
-
-    # Procura o usuário correspondente
     user = next((u for u in usuarios if u['usuario'] == usuario_input), None)
 
     if user:
-        # Se o arquivo armazenar a senha em texto limpo antigo ("maria123")
-        if 'senha' in user and user['senha'] == senha_input:
+        autenticado = False
+        
+        # Puxa o valor da senha gravada no banco (pode estar como 'senha' ou 'senha_hash')
+        banco_senha_hash = str(user.get('senha_hash', '')).strip()
+        banco_senha_limpa = str(user.get('senha', '')).strip()
+
+        # SUPER VALIDAÇÃO: Testa contra todas as combinações possíveis
+        if banco_senha_hash:
+            if banco_senha_hash.lower() == hash_minusculo:
+                autenticado = True
+            elif banco_senha_hash.upper() == hash_maiusculo:
+                autenticado = True
+            elif banco_senha_hash == senha_input: # Se o hash gravado for a senha limpa por engano
+                autenticado = True
+                
+        if banco_senha_limpa and banco_senha_limpa == senha_input:
             autenticado = True
-        # Se o arquivo armazenar a senha em formato Hash seguro ("228f645...")
-        elif 'senha_hash' in user and (user['senha_hash'] == hash_da_senha or user['senha_hash'] == senha_input):
-            autenticado = True
-        else:
-            autenticado = False
 
         if autenticado:
             session['usuario'] = user['usuario']
@@ -113,7 +119,6 @@ def login():
             return jsonify({"sucesso": True, "nome": user['nome']})
 
     return jsonify({"sucesso": False, "mensagem": "Usuário ou senha incorretos."}), 401
-
 # --- LISTA DE JOGOS DISPONÍVEIS PARA PALPITE ---
 @app.route('/api/jogos_por_escolha', methods=['GET'])
 def jogos_por_escolha():
