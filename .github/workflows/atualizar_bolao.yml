@@ -1,0 +1,39 @@
+name: Atualizar Dados do Bolao
+
+on:
+  schedule:
+    - cron: '0 */2 * * *' # Roda automaticamente a cada 2 horas
+  workflow_dispatch: # Permite que você clique em um botão no GitHub e force a rodada na hora
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Baixar codigo do repositorio
+      uses: actions/checkout@v3
+
+    - name: Configurar Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Instalar Dependencias
+      run: pip install requests
+
+    - name: Rodar Script de Atualizacao
+      env:
+        API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+      run: python atualizador.py
+
+    - name: Enviar jogos.json para o PythonAnywhere
+      run: |
+        curl -X POST -H "Authorization: Token ${{ secrets.PYTHONANYWHERE_TOKEN }}" \
+        -F "content=@jogos.json" \
+        https://www.pythonanywhere.com/api/v1/user/mariamartinsf/files/path/home/mariamartinsf/mysite/jogos.json
+
+    - name: Enviar classificacao.json para o PythonAnywhere
+      run: |
+        curl -X POST -H "Authorization: Token ${{ secrets.PYTHONANYWHERE_TOKEN }}" \
+        -F "content=@classificacao.json" \
+        https://www.pythonanywhere.com/api/v1/user/mariamartinsf/files/path/home/mariamartinsf/mysite/classificacao.json
